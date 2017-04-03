@@ -13,3 +13,5 @@ __A commit is essentially a save-point within a branch.  A good commit message w
 
 * What is a merge conflict?
 __A merge conflict is when two merging files contain data, and git is unsure which should have priority.  An example of this would happen if someone were to try to simultaneously merge two text files to the master, and the files contain text in the same place.__
+
+I'm hanging with my girlfriend's dog.
