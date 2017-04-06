@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Are you a pet person?</title>
+</head>
+<body>
+<form name="pet-person" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>What kind of pets do you prefer?</label>
+      <select name="petpref">
+        <option value="blank">Choose one...</option>
+        <option value="dog">Dogs</option>
+        <option value="cat">Cats</option>
+        <option value="fish">Fish</option>
+        <option value="other">Other/None</option>
+      </select>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div>
+      <label>Why did you choose your pet?</label>
+      <textarea placeholder="Type Here"></textarea>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div>
+      <label>When was your pet born?</label>
+      <input type="date" name="petbday">
+    </div>
+    <div>
+      <label>What breed is your pet?</label>
+      <input type="text" name="breed" placeholder="Breed">
+    </div>
+    <div>
+      <input type="checkbox" name="pet-yes" value="agree">
+      Check this box if you're looking for another pet.
+    </div>
+  </fieldset>
+
+  <button type="submit">Press to send your information</button>
+</form>
+</body>
+</html>
