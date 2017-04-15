@@ -1,8 +1,17 @@
-img {
+.octo 
+{
   display: block;
-  margin: auto;
-  width: 40;
-  padding-top: 20px;
-  
+  position: relative;
+  z-index: 2;
+}
+.glasses 
+{
+
+  position: relative;
+  margin-left: 50%;
+  z-index: 5;
+}
+.hat {
+  display: none;
 
 }
