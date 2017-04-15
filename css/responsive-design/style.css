@@ -54,7 +54,7 @@ figcaption {
 @media screen and (max-width: 500px) 
 {
   body {
-    background-color: orange;
+    font-size: : 12px;
   }
   main {
   width: 100%;
