@@ -1,0 +1,28 @@
+* { outline: 1px solid red; }
+
+
+
+
+#octo 
+{
+  display:block;
+  margin: 0px auto;
+  position: fixed;
+  margin-left: 40%;
+  padding-top: 5%;
+  z-index: 2;
+}
+
+#glasses 
+{
+  position: fixed;
+  top: 18%;
+  left: 45%;
+  z-index: 5;
+}
+#hat {
+  position: fixed;
+  top: 15% ;
+  left: 38% ;
+  z-index: 5;
+}
