@@ -1,3 +1,9 @@
+body {
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -9,9 +15,24 @@ cite {
   margin-top: 10px;
 }
 
+
+#external-links {
+  float: left;
+  display: block;
+  width: 20%;
+  position: relative;
+  vertical-align: top;
+
+}
+
+main {
+  width: 80%;
+  float: left;
+}
+
 #external-links ul {
   list-style-type: none;
-  padding-left: 0px;
+  padding-left: 1px;
 }
 
 /* you're welcome to edit the
@@ -21,7 +42,7 @@ img {
   width: 100%;
 }
 
-figure {
+figure {ß
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -29,4 +50,16 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+@media screen and (max-width: 500px) 
+{
+  body {
+    background-color: orange;
+  }
+  main {
+  width: 100%;
+  }
+  #external-links {
+    width: 100%
+  }
 }
