@@ -1,4 +1,4 @@
-* { outline: 1px solid red; }
+
 
 
 #octopus
@@ -6,8 +6,8 @@
   display: block;
   text-align: center;
   margin: 100px 0 auto 0;
-  position: relative;
-
+  position: fixed;
+  left: 40%;
 
 }
 
@@ -15,8 +15,10 @@
 {
   display: block;
   text-align: center;
-  position: relative;
+  position: fixed;
   margin: 0px auto;
+  top: 208px;
+  left: 43%;
   z-index: 6
 } 
 #hat 
@@ -26,7 +28,7 @@
   text-align: center;
   margin: 0px auto;
   position: fixed;
-  top: 10px;
-  left: 44%;
+  top: 45px;
+  left: 38.5%;
   z-index: 7;
 }
