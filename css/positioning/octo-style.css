@@ -1,12 +1,14 @@
-
-
+.fancyocto {
+  position: relative;
+  width: 960px;
+  margin: auto;
+}
 
 #octopus
 {
   display: block;
-  text-align: center;
-  margin: 100px 0 auto 0;
-  position: fixed;
+  position: absolute;
+  margin-top: 100px;
   left: 40%;
 
 }
@@ -14,21 +16,17 @@
 #glasses 
 {
   display: block;
-  text-align: center;
-  position: fixed;
-  margin: 0px auto;
-  top: 208px;
-  left: 43%;
+  position: absolute;
+  top: 199px;
+  left: 44.5%;
   z-index: 6
 } 
 #hat 
 {
 
   display: block;
-  text-align: center;
-  margin: 0px auto;
-  position: fixed;
+  position: absolute;
   top: 45px;
-  left: 38.5%;
+  left: 38%;
   z-index: 7;
 }
