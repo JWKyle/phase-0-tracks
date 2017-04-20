@@ -32,7 +32,7 @@ age = gets.chomp.to_f
     puts "I have #{name} as #{age} years old."
   end
 
-puts "Thank you!  Please press any key for a full report on #{name}:"
+puts "Thank you!  Please press 'Enter' for a full report on #{name}:"
 nothing = gets.chomp
 
 
