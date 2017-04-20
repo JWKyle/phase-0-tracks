@@ -10,7 +10,7 @@ Robot Algorithm
 - Once number is identified, determine which button to press.
     + if the number appears on a button, press button.
     + if button does not appear on button, press button to its immediate right.
-- Commence playing of public-domain music.
+- Commence playing of repetitive public-domain music.
 - Enjoy ride.
 
 Feeding Gill the fish in the morning
@@ -18,10 +18,10 @@ Feeding Gill the fish in the morning
 - Wake up
 - get out of bed
     + If cold, put on slippers, then proceed to Gill's tank.
-    + Else, proceed to Gill's tank
+    + Otherwise, proceed to Gill's tank
 - Stand in front of Gill's tank
     + If the light on Gill's tank is on, then your wonderful girlfriend has already fed him.  Tell Gill "Good Morning," then proceed with your day.  
-    + Else, tell Gill "Good Morning!" and turn on light.
+    + Otherwise, tell Gill "Good Morning!" and turn on light.
 - Take off lid of Gill's tank
 - Place lid on table.
 - Open draw below Gill's tank (aka Gill's Drawer)
@@ -31,7 +31,7 @@ Feeding Gill the fish in the morning
 - place fingers inside dish
 - withdraw 5 pellets from dish
 - move hand over front left corner of tank
-    + until you have o pellets in your fingers
+    + until you have 0 pellets in your fingers
         * drop one pellet in tank
         * observe Gill eating up pellet
 - pick up dish lid
