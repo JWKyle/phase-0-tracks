@@ -26,4 +26,3 @@ age = gets.chomp.to_f
   else
     puts "I have #{name} as #{age} years old."
   end
-
