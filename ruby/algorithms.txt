@@ -15,4 +15,17 @@ Robot Algorithm
 
 Feeding Gill the fish in the morning
 
-
+- Wake up
+- get out of bed
+    + If cold, put on slippers, then proceed to Gill's tank.
+    + Else, proceed to Gill's tank
+- Approach Gill's tank
+    + If the light on Gill's tank is on, then your wonderful girlfriend has already fed him.  Tell Gill "Good Morning," then proceed with your day.  
+    + Else, tell Gill "Good Morning!" and turn on light.
+- Take off lid of Gill's tank
+- Place lid on table.
+- Open draw below Gill's tank (aka Gill's Drawer)
+- Remove 4 oz tupperware dish from drawer
+- Remove lid from dish 
+- place lid next to tank lid
+- 
