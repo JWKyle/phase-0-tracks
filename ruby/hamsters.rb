@@ -9,15 +9,20 @@ puts "The hamster is a #{loud} on the loud scale."
 puts "What color is the hamster?"
 color = gets.chomp
 puts "The hamster is #{color}."
-puts "Is the hamster a good candidate for adoption? (y/n)"
-adopt = gets.chomp 
-  if adopt == "y"
-    puts "The hamster is a good candidate for adoption."
-  elsif adopt == "n"
-    puts "The hamster is NOT a good candidate for adoption."
-  else
-    puts "please re-enter your answer as a y or n"
-  end
+valid_input = false
+until valid_input
+  puts "Is the hamster a good candidate for adoption? (y/n)"
+  adopt = gets.chomp 
+    if adopt == "y"
+      puts "The hamster is a good candidate for adoption."
+      valid_input = true
+    elsif adopt == "n"
+      puts "The hamster is NOT a good candidate for adoption."
+      valid_input = true
+    else
+      puts "please re-enter your answer as a y or n"
+    end
+end
 puts "How old is #{name} in years?"
 age = gets.chomp.to_f
   if age == 0.0
