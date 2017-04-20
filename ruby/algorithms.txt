@@ -19,13 +19,26 @@ Feeding Gill the fish in the morning
 - get out of bed
     + If cold, put on slippers, then proceed to Gill's tank.
     + Else, proceed to Gill's tank
-- Approach Gill's tank
+- Stand in front of Gill's tank
     + If the light on Gill's tank is on, then your wonderful girlfriend has already fed him.  Tell Gill "Good Morning," then proceed with your day.  
     + Else, tell Gill "Good Morning!" and turn on light.
 - Take off lid of Gill's tank
 - Place lid on table.
 - Open draw below Gill's tank (aka Gill's Drawer)
-- Remove 4 oz tupperware dish from drawer
+- Remove 4 oz Tupperware dish from drawer
 - Remove lid from dish 
 - place lid next to tank lid
-- 
+- place fingers inside dish
+- withdraw 5 pellets from dish
+- move hand over front left corner of tank
+    + until you have o pellets in your fingers
+        * drop one pellet in tank
+        * observe Gill eating up pellet
+- pick up dish lid
+- place lid on dish
+- put dish in drawer
+- close drawer
+- pick up tank lid
+- replace tank lid on Gill's tank
+- Tell Gill to have a nice day
+- Precede with morning
