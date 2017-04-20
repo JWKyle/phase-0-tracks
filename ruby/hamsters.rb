@@ -37,3 +37,9 @@ nothing = gets.chomp
 
 
 puts "This #{age} year old #{color} hamster is named #{name}."
+puts "On a scale of 1 to 10, where 10 is the loudest, you ranked #{name} as a #{loud}."
+  if adopt == "n"
+    puts  "You do not feel that #{name} is a good candidate for adoption."
+  else
+    puts  "You feel that #{name} is a good candidate for adoption."
+  end
