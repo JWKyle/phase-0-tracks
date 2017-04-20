@@ -1,0 +1,18 @@
+Robot Algorithm
+
+- Acquire desired floor number from your human buddy
+- Until you find the button for the floor you wish to go
+    + Face the button panel
+    + find the button to the lowest left.
+        * if button number doesn't equal desired number, focus on button to it immediate right. If there is no button, proceed to the next row up.  
+        * if this number doesn't equal the desired floor, focus on button to immediate left. If no button exists, proceed up one row.
+    + continue above sequence until number is located. 
+- Once number is identified, determine which button to press.
+    + if the number appears on a button, press button.
+    + if button does not appear on button, press button to its immediate right.
+- Commence playing of public-domain music.
+- Enjoy ride.
+
+Feeding Gill the fish in the morning
+
+
