@@ -31,3 +31,9 @@ age = gets.chomp.to_f
   else
     puts "I have #{name} as #{age} years old."
   end
+
+puts "Thank you!  Please press enter for a full report on #{name}:"
+nothing = gets.chomp
+
+
+puts "This #{age} year old #{color} hamster is named #{name}."
