@@ -9,12 +9,16 @@
 def encrypt(x)
   @newcode = []
   for i in 0...x.length
-    @newcode[i] = x[i].next
+    if x[i] != " " 
+      @newcode[i] = x[i].next
+    else
+      @newcode[i] = x[i]
+    end
   end
-return @newcode
+return @newcode.join
 end
 
-code = "abcde"
+code = "ab cde"
 secret = encrypt(code)
 
-puts secret.to_s
+puts secret
