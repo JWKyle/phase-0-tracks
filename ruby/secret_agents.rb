@@ -7,10 +7,14 @@
 # ignore spaces
 
 def encrypt(x)
+  @newcode = []
   for i in 0...x.length
-    puts x[i]
+    @newcode[i] = x[i].next
   end
+return @newcode
 end
-encrypt("abcde")
 
+code = "abcde"
+secret = encrypt(code)
 
+puts secret.to_s
