@@ -8,13 +8,15 @@
 # ignore spaces (turns into ! on encrypt)
 
 # alpha string as key, to avoid edge cases
-alpha = "abcdefghijklmnopqrstuvwxyz"
+$alpha = "abcdefghijklmnopqrstuvwxyz"
 
 
 def encrypt(x)
   @newcode = []
   for i in 0...x.length
-    if x[i] != " " 
+    if x[i] == "z"
+      @newcode[i] = "a"
+    elsif x[i] != " " 
       @newcode[i] = x[i].next
     else
       @newcode[i] = x[i]
@@ -32,10 +34,10 @@ end
 
 def decrypt(x)
   @newcode = []
-  alpha = "abcdefghijklmnopqrstuvwxyz"
+  # $alpha = "abcdefghijklmnopqrstuvwxyz"
   for i in 0...x.length
     if x[i] != " " 
-      @newcode[i] = alpha[alpha.index(x[i])-1]
+      @newcode[i] = $alpha[$alpha.index(x[i])-1]
     else
       @newcode[i] = x[i]
     end
@@ -47,3 +49,7 @@ puts encrypt("abc")
 puts encrypt("zed")
 puts decrypt("bcd")
 puts decrypt("afe")
+
+puts decrypt(encrypt("swordfish"))
+# 
+
