@@ -45,9 +45,20 @@ def decrypt(x)
 return @newcode.join
 end
 
+# puts encrypt("abc")
+# puts encrypt("zed")
+# puts decrypt("bcd")
+# puts decrypt("afe")
+
+# puts decrypt(encrypt("swordfish"))
+# This nested method call works because the order of operations dictates
+# that the method within the parenthesis should be executed and used before the method
+# outside the parenthesis.  In this case, the methods first encrypt, then decrypt "swordfish,"
+# resulting in an answer of 'swordfish.'
+
 
 # Prompt user whether they want to decrypt or encrypt
-  # puts and gets.chomp
+  #puts and gets.chomp
 # Ask string to operate on
 # Based on first answer, run string through proper method
 
