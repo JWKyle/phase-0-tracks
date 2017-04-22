@@ -1,10 +1,13 @@
 # Encrypt and Decrypt Text
 
+# Encrypt
 # Take every letter, advance one
 
 # assume lowercase inputs
 
-# ignore spaces
+# ignore spaces (turns into ! on encrypt)
+
+# alpha string as key, to avoid edge cases
 alpha = "abcdefghijklmnopqrstuvwxyz"
 
 
@@ -20,11 +23,12 @@ def encrypt(x)
 return @newcode.join
 end
 
-code = "ab cde"
-secret = encrypt(code)
 
-puts secret
 
+# Reverse the order of letters
+# Use [-1] within the index
+# Use alpha string to avoid edges
+# 
 
 def decrypt(x)
   @newcode = []
@@ -39,4 +43,7 @@ def decrypt(x)
 return @newcode.join
 end
 
-puts decrypt(code)
+puts encrypt("abc")
+puts encrypt("zed")
+puts decrypt("bcd")
+puts decrypt("afe")
