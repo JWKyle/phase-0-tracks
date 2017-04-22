@@ -45,11 +45,33 @@ def decrypt(x)
 return @newcode.join
 end
 
-puts encrypt("abc")
-puts encrypt("zed")
-puts decrypt("bcd")
-puts decrypt("afe")
 
-puts decrypt(encrypt("swordfish"))
-# 
+# Prompt user whether they want to decrypt or encrypt
+  # puts and gets.chomp
+# Ask string to operate on
+# Based on first answer, run string through proper method
+
+valid_operation = false
+until valid_operation
+  puts "Would you like to encrypt or decrypt?"
+  operation = gets.chomp.downcase
+    if operation == "encrypt" || operation == "decrypt"
+      valid_operation = true
+    else
+      puts "Please choose either 'encrypt' or 'decrypt'"
+    end
+end
+ 
+puts "What would you like to have processed?"
+user_input = gets.chomp.downcase
+
+case operation
+  when "encrypt"
+    puts encrypt(user_input)
+  when "decrypt"
+    puts decrypt(user_input)
+  # else
+    # puts "Please choose either 'encrypt' or 'decrypt'"
+  end
+
 
