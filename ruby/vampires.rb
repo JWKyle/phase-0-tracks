@@ -40,8 +40,36 @@ end
 puts "Thank you for filling out this survey.  Welcome to Werewolf Inc!"
 
 # Detection Logic
+useragetest = false
+until useragetest
+  if birthage == age.to_i
+    useragetest = false
+  end  
+end
 
-if birthage != age.to_i
-  useragetest = false
+cond1 = (useragetest == true) && (insure == "y" || bread == "y") 
+cond2 = (useragetest == false) && (insure == "n" || bread == "n")
+cond3 = (useragetest == false) && (insure == "n" && bread == "n")
+cond4 = (name == "Drake Cola" || name == "Tu Fang")
 
-(birthage == age.to_i) && ()
+case vampire_results
+when cond1
+  puts "Probably not a vampire."
+when cond2
+  puts "Probably a vampire."
+when cond3 
+  puts "Almost certainly a vampire."
+when cond4
+  puts "Definitely a vampire."
+else 
+  puts "Results inconclusive."
+end
+
+
+  
+
+
+
+
+
+
