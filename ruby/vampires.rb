@@ -41,4 +41,7 @@ puts "Thank you for filling out this survey.  Welcome to Werewolf Inc!"
 
 # Detection Logic
 
+if birthage != age.to_i
+  useragetest = false
+
 (birthage == age.to_i) && ()
