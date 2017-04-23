@@ -1,6 +1,6 @@
 # Vampire Data collection
 
-puts "What is our name?"
+puts "What is your name?"
 name = gets.chomp
 puts "Thanks!  Now, how old are you?"
 age = gets.chomp
@@ -12,7 +12,7 @@ until valid_input
   puts "Our dining room serves some great garlic bread,"  
   puts "however we need to order it ahead of time." 
   puts "Would you like me to order some for you? (y or n)"
-  bread = gets.chomp 
+  bread = gets.chomp.downcase
     if  bread == "y"
       puts "I'll put your order in right away."
       valid_input = true
@@ -26,7 +26,7 @@ end
 valid_input2 = false
 until valid_input2
   puts "Would you like to enroll in the company's health insurance? (y or n)"
-  insure = gets.chomp
+  insure = gets.chomp.downcase
     if insure == "y"
       puts "I have recorded your response as 'Yes.'"
       valid_input2 = true
@@ -40,26 +40,25 @@ end
 puts "Thank you for filling out this survey.  Welcome to Werewolf Inc!"
 
 # Detection Logic
-useragetest = false
-until useragetest
   if birthage == age.to_i
     useragetest = false
+  else
+    useragetest = true
   end  
-end
 
-cond1 = (useragetest == true) && (insure == "y" || bread == "y") 
-cond2 = (useragetest == false) && (insure == "n" || bread == "n")
-cond3 = (useragetest == false) && (insure == "n" && bread == "n")
-cond4 = (name == "Drake Cola" || name == "Tu Fang")
+vamp1 = (useragetest == true) && (insure == "y" || bread == "y") 
+vamp2 = (useragetest == false) && (insure == "n" || bread == "n")
+vamp3 = (useragetest == false) && (insure == "n" && bread == "n")
+vamp4 = (name == "Drake Cola" || name == "Tu Fang")
 
-case vampire_results
-when cond1
+case vamp
+when vamp1
   puts "Probably not a vampire."
-when cond2
+when vamp2
   puts "Probably a vampire."
-when cond3 
+when vamp3 
   puts "Almost certainly a vampire."
-when cond4
+when vamp4
   puts "Definitely a vampire."
 else 
   puts "Results inconclusive."
