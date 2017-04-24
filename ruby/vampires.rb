@@ -5,8 +5,8 @@ name = gets.chomp
 puts "Thanks!  Now, how old are you?"
 age = gets.chomp
 puts "What year were you born?"
-birthyear = gets.chomp
-birthage = Time.new.year - birthyear.to_i
+birthyear = gets.chomp.to_i
+birthage = 2017 - birthyear
 valid_input = false
 until valid_input
   puts "Our dining room serves some great garlic bread,"  
@@ -52,13 +52,13 @@ puts "Thank you for filling out this survey.  Welcome to Werewolf Inc!"
 # vamp4 = (name == "Drake Cola" || name == "Tu Fang")
 
 vamp = nil
-  if (useragetest == true) && ("#{insure}" == "y" || "#{bread}" == "y")
+  if (birthage == age) && (insure == "y" || insure == "y")
     puts "Probably not a vampire."
     vamp = false
-  elsif (useragetest == false) && (insure == "n" || bread == "n")
+  elsif (birthage != age) && (insure == "n" || bread == "n")
     puts "Probably a vampire."
     vamp = true
-  elsif (useragetest == false) && (insure == "n" && bread == "n")
+  elsif (birthage != age) && (insure == "n" && bread == "n")
     puts "Almost certainly a vampire."
     vamp = true
   elsif (name == "Drake Cola" || name == "Tu Fang")
