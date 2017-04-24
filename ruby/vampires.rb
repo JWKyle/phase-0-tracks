@@ -46,10 +46,10 @@ puts "Thank you for filling out this survey.  Welcome to Werewolf Inc!"
     useragetest = true
   end  
 
-vamp1 = (useragetest == true) && (insure == "y" || bread == "y") 
-vamp2 = (useragetest == false) && (insure == "n" || bread == "n")
-vamp3 = (useragetest == false) && (insure == "n" && bread == "n")
-vamp4 = (name == "Drake Cola" || name == "Tu Fang")
+# vamp1 = (useragetest == true) && (insure == "y" || bread == "y") 
+# vamp2 = (useragetest == false) && (insure == "n" || bread == "n")
+# vamp3 = (useragetest == false) && (insure == "n" && bread == "n")
+# vamp4 = (name == "Drake Cola" || name == "Tu Fang")
 
 case vamp
 when vamp1
@@ -63,6 +63,7 @@ when vamp4
 else 
   puts "Results inconclusive."
 end
+
 
 
   
