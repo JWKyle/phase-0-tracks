@@ -52,7 +52,7 @@ puts "Thank you for filling out this survey.  Welcome to Werewolf Inc!"
 # vamp4 = (name == "Drake Cola" || name == "Tu Fang")
 
 vamp = nil
-  if (useragetest == true) && (insure == "y" || bread == "y")
+  if (useragetest == true) && ("#{insure}" == "y" || "#{bread}" == "y")
     puts "Probably not a vampire."
     vamp = false
   elsif (useragetest == false) && (insure == "n" || bread == "n")
