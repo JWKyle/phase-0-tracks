@@ -91,7 +91,8 @@ while curnum  <= empnum
     end     
   curnum += 1
  end
-   
+ 
+ "Actually, never mind! What do these questions have to do with anything? Let's all be friends."  
   
   
   # case vamp
