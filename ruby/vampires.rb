@@ -88,12 +88,17 @@ while curnum  <= empnum
     if allergy == "done"
       puts "Thank you!"
     end  
-    end     
+    end 
+  if curnum == empnum
+    puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."  
+  end  
   curnum += 1
  end
+
  
- "Actually, never mind! What do these questions have to do with anything? Let's all be friends."  
-  
+ # while curnum == empnum
+ #  puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."  
+ # end 
   
   # case vamp
   
