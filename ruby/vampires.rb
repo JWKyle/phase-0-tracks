@@ -71,6 +71,23 @@ vamp = nil
 
 
 
+puts "Do you have any allergies?  Please list one by one. If 'No' type 'done'"
+allergy = gets.chomp
+  if allergy != "done"
+    until (allergy == "done") || (allergy == "sunshine")
+      puts "What other allergies do you have?"
+      allergy = gets.chomp
+    end
+  if allergy == "sunshine"
+    puts "Probably a vampire"
+  end
+  if allergy == "done"
+    puts "Thank you!"
+  end  
+  end     
+
+
+
 # case vamp
 
 # when vamp1
