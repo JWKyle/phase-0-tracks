@@ -3,7 +3,7 @@
 puts "What is your name?"
 name = gets.chomp
 puts "Thanks!  Now, how old are you?"
-age = gets.chomp
+age = gets.chomp.to_i
 puts "What year were you born?"
 birthyear = gets.chomp.to_i
 birthage = 2017 - birthyear
@@ -12,7 +12,7 @@ until valid_input
   puts "Our dining room serves some great garlic bread,"  
   puts "however we need to order it ahead of time." 
   puts "Would you like me to order some for you? (y or n)"
-  bread = gets.chomp.downcase
+  bread = gets.chomp
     if  bread == "y"
       puts "I'll put your order in right away."
       valid_input = true
@@ -26,7 +26,7 @@ end
 valid_input2 = false
 until valid_input2
   puts "Would you like to enroll in the company's health insurance? (y or n)"
-  insure = gets.chomp.downcase
+  insure = gets.chomp
     if insure == "y"
       puts "I have recorded your response as 'Yes.'"
       valid_input2 = true
@@ -40,28 +40,29 @@ end
 puts "Thank you for filling out this survey.  Welcome to Werewolf Inc!"
 
 # Detection Logic
-  if birthage == age.to_i
-    useragetest = false
-  else
-    useragetest = true
-  end  
-
-# vamp1 = (useragetest == true) && (insure == "y" || bread == "y") 
-# vamp2 = (useragetest == false) && (insure == "n" || bread == "n")
-# vamp3 = (useragetest == false) && (insure == "n" && bread == "n")
+  # if birthage != age.to_i
+  #   useragetest = false
+  # else
+  #   useragetest = true
+  # end  
+# vamp = nil
+# vamp1 = (birthage == age) && (insure == "y" || bread == "y") 
+# vamp2 = (birthage != age) && (insure == "n" || bread == "n")
+# vamp3 = (birthage != age) && (insure == "n" && bread == "n")
 # vamp4 = (name == "Drake Cola" || name == "Tu Fang")
 
 vamp = nil
-  if (birthage == age) && (insure == "y" || insure == "y")
+  if (birthage == age) && (("#{insure}" == "y") || ("#{insure}" == "y"))
     puts "Probably not a vampire."
     vamp = false
+
   elsif (birthage != age) && (insure == "n" || bread == "n")
     puts "Probably a vampire."
     vamp = true
   elsif (birthage != age) && (insure == "n" && bread == "n")
     puts "Almost certainly a vampire."
     vamp = true
-  elsif (name == "Drake Cola" || name == "Tu Fang")
+  elsif ("#{name}" == "Drake Cola" || "#{name}" == "Tu Fang")
     puts "Definitely a vampire."
     vamp = true
   else
@@ -70,10 +71,8 @@ vamp = nil
 
 
 
-  
-
-
 # case vamp
+
 # when vamp1
 #   puts "Probably not a vampire."
 # when vamp2
