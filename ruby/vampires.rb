@@ -51,18 +51,40 @@ puts "Thank you for filling out this survey.  Welcome to Werewolf Inc!"
 # vamp3 = (useragetest == false) && (insure == "n" && bread == "n")
 # vamp4 = (name == "Drake Cola" || name == "Tu Fang")
 
-case vamp
-when vamp1
-  puts "Probably not a vampire."
-when vamp2
-  puts "Probably a vampire."
-when vamp3 
-  puts "Almost certainly a vampire."
-when vamp4
-  puts "Definitely a vampire."
-else 
-  puts "Results inconclusive."
-end
+vamp = nil
+  if (useragetest == true) && (insure == "y" || bread == "y")
+    puts "Probably not a vampire."
+    vamp = false
+  elsif (useragetest == false) && (insure == "n" || bread == "n")
+    puts "Probably a vampire."
+    vamp = true
+  elsif (useragetest == false) && (insure == "n" && bread == "n")
+    puts "Almost certainly a vampire."
+    vamp = true
+  elsif (name == "Drake Cola" || name == "Tu Fang")
+    puts "Definitely a vampire."
+    vamp = true
+  else
+    puts "Results are inconclusive."
+  end
+
+
+
+  
+
+
+# case vamp
+# when vamp1
+#   puts "Probably not a vampire."
+# when vamp2
+#   puts "Probably a vampire."
+# when vamp3 
+#   puts "Almost certainly a vampire."
+# when vamp4
+#   puts "Definitely a vampire."
+# else 
+#   puts "Results inconclusive."
+# end
 
 
 
