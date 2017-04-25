@@ -9,6 +9,8 @@ p "iNvEsTiGaTiOn".swapcase
 
 
 p "zom".insert(1, "o")
+# or
+p "zom".sub('o', 'oo')
 #=> “zoom”
 
 p "enhance".center(15)
@@ -17,15 +19,12 @@ p "enhance".center(15)
 p "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
-p "or"
 p "the usual".insert(9, " suspects")
 
 #=> "the usual suspects"
 
-# 
 
-# " suspects".rjust(9, "the usual")
+p " suspects".prepend("the usual")
 # => "the usual suspects"
 
 p "The case of the disappearing last letter".chop
@@ -37,7 +36,7 @@ p "The mystery of the missing first letter".slice(1..40)
 p "Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+p "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
