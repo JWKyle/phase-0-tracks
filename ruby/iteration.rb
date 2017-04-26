@@ -80,3 +80,17 @@ p colors
 
 
 ## Release 2#
+# Data Sets
+letters = {
+  alpha: "a",
+  beta: "b",
+  delta: "d",
+  epsilon: "e",
+
+}
+
+numbers = [1, 2, 3, 4, 5]
+
+##
+
+
