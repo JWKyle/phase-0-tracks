@@ -52,7 +52,7 @@ end
 puts "After .each call:"
 p colors
 
-# .each hash
+# .each Hash
 
 puts "Original Data:"
 p turtles
@@ -64,5 +64,19 @@ end
 puts "After .each call:"
 p turtles
 
+# .map! Array
+
+puts "Original Data:"
+p colors
 
 
+colors.map! do |hue|
+  puts hue
+  hue.upcase
+end
+
+puts "After .map call:"
+p colors 
+
+
+## Release 2
