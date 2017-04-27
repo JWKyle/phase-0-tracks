@@ -67,9 +67,10 @@ change = gets.chomp
   else
     puts "OK, sounds good.  Here's one more copy of your information for your records."
   end
-  
+
 puts " "  
 p clientinfo 
+
 
 
 
