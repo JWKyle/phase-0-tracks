@@ -131,6 +131,22 @@ comicbooks = {
             }
         
         }
+    },
+    image_comics: {
+        spawn: {
+            colors: [
+                "Red",
+                "Black",
+                "White"
+            ],
+            location: 'unknown',
+            creators: {
+                writer: 'Todd McFarlane',
+                artist: 'Todd McFarlane'
+            }
+        }
     }
 }
+
 p comicbooks
+
