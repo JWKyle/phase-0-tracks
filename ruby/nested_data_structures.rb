@@ -106,7 +106,7 @@ comicbooks = {
             }
     
         },
-        batman: {
+        captain_america: {
             colors: [
               "Red",
               "White",
@@ -149,4 +149,17 @@ comicbooks = {
 }
 
 p comicbooks
+puts ""
+
+p comicbooks[:marvel_comics][:captain_america][:colors].reverse
+p comicbooks[:image_comics][:spawn][:creators][:writer]
+p comicbooks[:dc_comics][:batman][:location]
+comicbooks[:dc_comics].each do |heros|
+  puts heros
+end
+
+
+
+
+
 
