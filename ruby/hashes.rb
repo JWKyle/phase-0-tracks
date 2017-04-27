@@ -48,5 +48,28 @@ puts " "
 
 p clientinfo
 
+#Changes to data
+# If client wants to change data:
+# Enter the key name
+# if not, client types "none," program exits
+# Print the edited list
+
+puts "Would you like to make any changes?"
+puts "If so, type in the name of the category you'd like to change."
+puts "If you're happy with what you have, type 'none'. "
+change = gets.chomp
+
+  if change != "none"
+    puts "What should this entry say instead?"
+    edit = gets.chomp
+    clientinfo[change.to_sym] = edit
+    puts "Here is your updated form.  Thanks!"
+  else
+    puts "OK, sounds good.  Here's one more copy of your information for your records."
+  end
+  
+puts " "  
+p clientinfo 
+
 
 
