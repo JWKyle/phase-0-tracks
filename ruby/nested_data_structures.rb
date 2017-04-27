@@ -91,6 +91,46 @@ comicbooks = {
             }
         
         }
+    },
+    marvel_comics: {
+        spiderman: {
+            colors: [
+              "Red", 
+              "Blue",
+              "Black"
+            ],
+            location: 'New York City',
+            creators: {
+                writer: "Stan Lee",
+                artist: "Steve Ditko"
+            }
+    
+        },
+        batman: {
+            colors: [
+              "Red",
+              "White",
+              "Blue"
+            ],
+            location: 'New York City',
+            creators: {
+                writer: 'Joe Simon',
+                artist: 'Jack Kirby'
+      
+            }
+        },
+        hulk: {
+            colors: [
+              "Green", 
+              "Purple"
+            ],
+            location: 'unknown',
+            creators: {
+                writer: 'Stan Lee',
+                artist: 'Jack Kirby'
+            }
+        
+        }
     }
 }
 p comicbooks
