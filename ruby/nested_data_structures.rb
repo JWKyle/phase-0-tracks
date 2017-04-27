@@ -55,7 +55,41 @@
 comicbooks = {
   dc_comics: {
     superman: {
+      colors: [
+        "Red", 
+        "Blue"
+      ]
+      location: 'Metropolis',
+      creators: {
+          writer: "Jerry Siegel"
+          artist: "Joe Shuster"
+      }
 
+    }
+    batman: {
+      colors: [
+        "Black",
+        "Yellow"
+      ]
+      location: 'Gotham City'
+      creators: {
+          writer: 'Bill Finger'
+          artist: 'Bob Kane'
+
+      }
+    }
+    wonder_woman: {
+      colors: [
+        "Red", 
+        "Blue",
+        "Gold"
+      ]
+      location: 'unknown'
+      creators: {
+          writer: 'William Moulton Marston'
+          artist: 'Harry G. Peter'
+      }
+    
     }
   }
 }
