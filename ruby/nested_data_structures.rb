@@ -148,14 +148,17 @@ comicbooks = {
     }
 }
 
-p comicbooks
+#p comicbooks
 puts ""
 
 p comicbooks[:marvel_comics][:captain_america][:colors].reverse
-p comicbooks[:image_comics][:spawn][:creators][:writer]
-p comicbooks[:dc_comics][:batman][:location]
-comicbooks[:dc_comics].each do |heros|
-  puts heros
+p comicbooks[:marvel_comics][:hulk][:creators].select {|role, name| name != "Stan Lee" }
+p comicbooks[:image_comics][:spawn][:location].upcase
+comicbooks2 = comicbooks[:dc_comics][:batman][:creators].invert.to_a
+p comicbooks2
+
+comicbooks[:dc_comics].each do |heroes|
+  puts heroes
 end
 
 
