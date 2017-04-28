@@ -8,6 +8,16 @@
     #.next each letter, either by vowel or consonant array
   #Shift vowels down the alphabet 1 space (a->e)
   #Shift consonants to the next consonant
+  # Strings
   # abcdefghijklmnopqrstuvwxyz = alphabet
   # vowels = alphabet - aeiou 
   # 2 arrays needed: [a, e, i, o, u] and alphabet - vowels
+# def nametaker(fname, lname)
+
+
+# end  
+
+alphabet = "abcdefghijklmnopqrstuvwxyz".chars
+p alphabet
+vowel = "aeiou".chars
+p vowel
