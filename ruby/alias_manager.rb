@@ -14,10 +14,14 @@
   # 2 arrays needed: [a, e, i, o, u] and alphabet - vowels
 # def nametaker(fname, lname)
 
+# useful methods
+  #.first
+  
+
 
 # end  
 
 alphabet = "abcdefghijklmnopqrstuvwxyz".chars
 p alphabet
-vowel = "aeiou".chars
+vowel = "aeiou".chars.index
 p vowel
