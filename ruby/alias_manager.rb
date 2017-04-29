@@ -16,12 +16,23 @@
 
 # useful methods
   #.first
+  #.rotate
+
   
 
 
 # end  
 
-alphabet = "abcdefghijklmnopqrstuvwxyz".chars
-p alphabet
-vowel = "aeiou".chars.index
+fullalphabet = "abcdefghijklmnopqrstuvwxyz"
+consonants = fullalphabet.delete 'aeiou'
+p consonants
+conarr = consonants.chars
+p conarr
+vowel = "aeiou".chars
 p vowel
+
+fullname = ["john", "doe"]
+fullname[0], fullname[1] = fullname[1], fullname [0]
+p fullname
+
+
