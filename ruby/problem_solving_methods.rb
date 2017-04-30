@@ -86,6 +86,5 @@ def bubsort(intarray)
     end  
   swapped = false
   end
-  in
 
 end
