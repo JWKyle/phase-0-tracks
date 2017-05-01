@@ -73,7 +73,9 @@
     continue = gets.chomp
       if continue == "quit"
         puts "Thank you for using the program.  Here is your list of names:"
-        p secret_name_database
+        secret_name_database.each do |orig, secret|
+          puts "#{orig}'s secret name is #{secret}."
+        end  
         valid_input = true
       else
         puts "Time to add another name..."
