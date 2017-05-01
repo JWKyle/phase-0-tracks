@@ -73,17 +73,22 @@ extinct_animals = {
 
 # 1. Iterate through extinct_animals hash, printing each key/value pair
 # with a dash in between the key and value, and an asterisk between each pair.
-# ----
+
+extinct_animals.each {|animal, year| p "#{animal} - #{year} *"}
+
 
 # 2. Keep only animals in extinct_animals if they were extinct before
 # the year 2000. Do not use any special built-in methods.
-# ----
-
+extinct_animals.each do |animal, year| 
+  if year < 2000
+    really_extinct <<  extinct_animals
+  end 
+end  
 # 3. Our calculations were completely off, turns out all of those animals went
 # extinct 3 years before the date provided. Update the values in extinct_animals
 # so they accurately reflect what year the animal went extinct.
 # Do not use any special built-in methods.
-# ----
+new_ext_date = extinct_animals.map {|animal, year| year - 3}
 
 # 4. You've heard that the following animals might be extinct, but you're not sure.
 # Check if they're included in extinct_animals, one by one:
@@ -91,10 +96,20 @@ extinct_animals = {
 # "Dodo"
 # "Saiga Antelope"
 # Do not use any special built-in methods.
-# ----
+extinct_animals.each do |animal, year|
+  if animal == "Andean Cat"
+    puts "Andean Cat is extinct"
+  elsif animal == "Dodo"
+    puts "Dodo is Extinct"
+  elsif animal == "Saiga Antelope"
+    puts "Saiga Antelope is extinct."
+  else
+    nil
+  end    
+end          
 
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
 # Find the built-in method that helps you accomplish this in the Ruby documentation
 # for Hashes.
-# ----
+non_extinct = extinct_animals.map.to_a.keep_if {|animal, year| animal == "Passenger Pigeon"}
