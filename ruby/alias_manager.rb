@@ -21,23 +21,75 @@
   
 
 
-# end  
-def secret_name(fullname)
+# # end  
+# def secret_name(fullname)
 
 fullalphabet = "abcdefghijklmnopqrstuvwxyz"
 consonants = fullalphabet.delete 'aeiou'
 # p consonants
-conarr = consonants.chars
+# conarr = consonants.chars
 # p conarr
-vowel = "aeiou".chars
+# vowel = "aeiou".chars
 # p vowel
 
+# fullname = ["john", "doe"]
+# fullname[0], fullname[1] = fullname[1], fullname [0]
+# p fullname
 
-fullname = ["john", "doe"]
-fullname[0], fullname[1] = fullname[1], fullname [0]
-p fullname
+# fullname.map { |conson| conson.next}
+# p fu
+
+# end
+
+##########
 
 
+alpha = ['a', 'b', 'c', 'd', 'e', 'u', 'z']
+vowels = ['a', 'e', 'i', 'o', 'u']
+# consonants = fullalphabet.delete 'aeiou'
+valpha = alpha.map do |vowel|
+  if vowels.include?(vowel)
+    vowels.rotate(1)[vowels.index(vowel)]
+  else
+    vowel
+  end
 end
+
+scons = alpha.map do |cons|
+  if consonants.include?(cons)
+    consonants.chars.rotate(1)[consonants.index(cons)]
+  else
+    cons
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
