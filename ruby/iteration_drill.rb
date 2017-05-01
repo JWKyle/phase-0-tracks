@@ -5,30 +5,59 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 
 # 1. Iterate through the zombie_apocalypse_supplies array,
 # printing each item in the array separated by an asterisk
-# ----
+zombie_apocalypse_supplies.map {|supps| puts supps + "*" }
 
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
-# ----
+def bubsort(zombie_apocalypse_supplies)
+  n = zombie_apocalypse_supplies.length
+
+  while 
+    swapped = false
+   (n-1).times do |int| 
+    if zombie_apocalypse_supplies[int] > zombie_apocalypse_supplies[int+1]
+      zombie_apocalypse_supplies[int], zombie_apocalypse_supplies[int + 1] = zombie_apocalypse_supplies[int + 1], zombie_apocalypse_supplies[int]
+      swapped = true
+    end  
+  swapped = false
+  end
+
+end
 
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
 # For instance: are boots in your list of supplies?
-# ----
+ def search_in(zombie_apocalypse_supplies, string)
+  zombie_apocalypse_supplies.each do |item|
+    if item == string
+      puts
+      "You currently have a #{string}"
+    else
+      puts "You currently do NOT have a #{string}"
+    end
+  end
+
+ search_in(zombie_apocalypse_supplies, "hatchet")     
+
 
 # 4. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5. Do not use any special built-in methods.
-# ----
+less_zombie_supplies = []
+less_zombie_supplies<< zombie_apocalypse_supplies[0..4]
+
+p less_zombie_supplies.flatten!
 
 # 5. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
 # and their supplies below. You should get rid of any duplicate items.
 # Find the built-in method that helps you accomplish this in the Ruby
 # documentation for Arrays.
+
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
-# ----
+update_supplies = (zombie_apocalypse_supplies + other_survivor_supplies).uniq
+p update_supplies
 
 # Hash Drills
 
