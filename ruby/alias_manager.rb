@@ -63,6 +63,12 @@ scons = alpha.map do |cons|
   end
 end
 
+puts "Whats your first name?"
+fname = gets.chomp
+puts "What's your last name?"
+lname = gets.chomp
+fullname =[fname, lname].chars
+p fullname
 
 
 
