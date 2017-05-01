@@ -67,7 +67,7 @@ puts "Whats your first name?"
 fname = gets.chomp
 puts "What's your last name?"
 lname = gets.chomp
-fullname =[fname, lname].chars
+fullname =[fname, lname].reverse!
 p fullname
 
 
