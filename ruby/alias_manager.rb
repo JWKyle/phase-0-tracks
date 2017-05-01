@@ -24,13 +24,16 @@
 # vowels = ['a', 'e', 'i', 'o', 'u']
 # consonants = fullalphabet.delete 'aeiou'
   def namecoder
-    original_name = []
+  valid_input = false
+    until valid_input
+    secret_name_database = []
     
     puts "Whats your first name?"
     fname = gets.chomp.downcase.split('')
     puts "What's your last name?"
     lname = gets.chomp.downcase.split('')
-    fullname = [fname," ", lname].flatten
+    original_name = [fname," ", lname].join
+    fullname = [fname," ", lname].reverse.flatten
     # p fullname
     
     fullalphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -60,16 +63,24 @@
       end
     end
     # p name_both_changed
-    secret_name = name_both_changed.join.capitalize
+    secret_name = name_both_changed.join
     orig_fullname = fullname.join.capitalize
-    p orig_fullname
+    secret_name_database << [original_name, secret_name]
+    p original_name
     p secret_name
-    
+  
+  puts "Press enter if you'd like to do another name.  Otherwise, type 'quit'."
+    continue = gets.chomp
+      if continue == "quit"
+        puts "Thank you for using the program.  Here is your list of names:"
+        p secret_name_database
+        valid_input = true
+      else
+        puts "Time to add another name..."
+      end  
   end
+end
   namecoder
-
-
-
 # # end  
 # def secret_name(fullname)
 
