@@ -24,41 +24,44 @@
 # # end  
 # def secret_name(fullname)
 
-fullalphabet = "abcdefghijklmnopqrstuvwxyz"
-consonants = fullalphabet.delete 'aeiou'
+$fullalphabet = "abcdefghijklmnopqrstuvwxyz"
+$consonants = fullalphabet.delete 'aeiou'
 
 
 
 
-alpha = ['a', 'b', 'c', 'd', 'e', 'u', 'z']
-vowels = ['a', 'e', 'i', 'o', 'u']
+$alpha = ['a', 'b', 'c', 'd', 'e', 'u', 'z']
+$vowels = ['a', 'e', 'i', 'o', 'u']
 # consonants = fullalphabet.delete 'aeiou'
 
   puts "Whats your first name?"
-  fname = gets.chomp
+  fname = gets.chomp.downcase!
   puts "What's your last name?"
-  lname = gets.chomp
-  fullname =[fname, lname].reverse!
-  p fullname
+  lname = gets.chomp.downcase!
+
   
-  def vowel_code(fullname)
-  valpha = vowels.map do |vowel|
-    if vowels.include?(vowel)
-      vowels.rotate(1)[vowels.index(vowel)]
+  def vowel_code(letter)
+  valpha = $vowels.map do |vowel|
+    if $vowels.include?(vowel)
+      $vowels.rotate(1)[$vowels.index(vowel)]
     else
       vowel
     end
   end
 end
-  
-  scons = alpha.map do |cons|
-    if consonants.include?(cons)
-      consonants.chars.rotate(1)[consonants.index(cons)]
+  def cons_code(letter)
+  scons = $consonants.map do |cons|
+    if $consonants.include?(cons)
+      $consonants.rotate(1)[$consonants.index(cons)]
     else
       cons
     end
   end
  end 
+
+
+   fullname =[fname, lname].reverse!
+  p fullname
   # puts "Whats your first name?"
   # fname = gets.chomp
   # puts "What's your last name?"
