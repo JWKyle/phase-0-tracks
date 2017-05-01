@@ -27,11 +27,11 @@
     original_name = []
     
     puts "Whats your first name?"
-    fname = gets.chomp.split('')
+    fname = gets.chomp.downcase.split('')
     puts "What's your last name?"
-    lname = gets.chomp.split('')
+    lname = gets.chomp.downcase.split('')
     fullname = [fname," ", lname].flatten
-    p fullname
+    # p fullname
     
     fullalphabet = "abcdefghijklmnopqrstuvwxyz"
     consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
@@ -47,7 +47,7 @@
         vowel
       end
     end
-  p fn_vowel  
+  # p fn_vowel  
     # name_vowels_changed.join
  
     # def cons_code(name_vowels_changed)
@@ -59,12 +59,14 @@
         cons
       end
     end
-    p name_both_changed
+    # p name_both_changed
+    secret_name = name_both_changed.join.capitalize
+    orig_fullname = fullname.join.capitalize
+    p orig_fullname
+    p secret_name
     
   end
   namecoder
-
-
 
 
 
