@@ -22,17 +22,22 @@
 
 
 # end  
+def secret_name(fullname)
 
 fullalphabet = "abcdefghijklmnopqrstuvwxyz"
 consonants = fullalphabet.delete 'aeiou'
-p consonants
+# p consonants
 conarr = consonants.chars
-p conarr
+# p conarr
 vowel = "aeiou".chars
-p vowel
+# p vowel
+
 
 fullname = ["john", "doe"]
 fullname[0], fullname[1] = fullname[1], fullname [0]
 p fullname
+
+
+end
 
 
