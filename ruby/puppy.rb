@@ -1,5 +1,6 @@
 ## puppy Class design
 
+#Class Puppy
 
 # breed-------
 # Name of breed, like Havanese, Cockapoo, Wheaton Terrier
