@@ -83,16 +83,23 @@ class Basketball_Player
     end
   end    
 end
-bbplayer = Basketball_Player.new
-bbplayer.dunk
-bbplayer.shoots
-bbplayer.scores(1)
-bbplayer.scores(2)
-bbplayer.scores(3)
-bbplayer.scores(4)
 
+# bbplayer.dunk
+# bbplayer.shoots
+# bbplayer.scores(1)
+# bbplayer.scores(2)
+# bbplayer.scores(3)
+# bbplayer.scores(4)
+bbplayerdata = []
 
+count = 1
+while count <= 50
+  bbplayer = Basketball_Player.new
+  bbplayerdata << bbplayer
+  count += 1
+end
 
+# p bbplayerdata
 
 
 
