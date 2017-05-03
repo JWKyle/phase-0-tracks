@@ -46,3 +46,56 @@ puppy.shake("blah")
 # Initialize runs before the called methods
 
 # When initialize is misspelled, it doesn't run, and I do not get an error.  Moral: check the spelling on initialize!!!
+
+## Basketball Player Class ##
+# initialize
+# actions
+  #dunk
+  #shoot
+  #score
+
+
+class Basketball_Player
+  #initialize method
+  def initialize
+    puts "Initializing Basketball_Player Instance"
+  end
+  #dunk method
+  def dunk
+    puts "Slaaammmmm Dunk!"
+  end  
+
+  # shoot method
+  def shoots 
+    puts "He shoots..."
+  end  
+
+  #score method
+  def scores(points)
+    if points == 1
+      puts "He made the freethrow!"
+    elsif points == 2
+      puts "He scores!"
+    elsif points == 3
+      puts "He scores from WAAAAYYYYY downtown!"  
+    else 
+      puts "Ooooo... airball!"
+    end
+  end    
+end
+bbplayer = Basketball_Player.new
+bbplayer.dunk
+bbplayer.shoots
+bbplayer.scores(1)
+bbplayer.scores(2)
+bbplayer.scores(3)
+bbplayer.scores(4)
+
+
+
+
+
+
+
+
+
