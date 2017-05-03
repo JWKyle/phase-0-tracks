@@ -27,6 +27,7 @@
 # output: hash minus the hash rockets
 string = "carrots apples cereal pizza"
 
+
 def groc_list(string)
   grocery_array = string.split
   grocery_list = {}
@@ -36,4 +37,23 @@ def groc_list(string)
 p grocery_list
 end
 
-groc_list(string)
+grocery_list = groc_list(string)
+
+
+def addto_list(item, quantity, grocery_list)
+  grocery_list[item] = quantity
+end
+
+addto_list("peas", 2, grocery_list)
+p grocery_list
+
+def removefrom_list(item, grocery_list)
+  grocery_list.delete(item)
+end
+
+removefrom_list("peas", grocery_list)
+p grocery_list
+
+
+
+
