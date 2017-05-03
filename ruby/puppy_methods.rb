@@ -99,7 +99,15 @@ while count <= 50
   count += 1
 end
 
-# p bbplayerdata
+bbplayerdata.each do |baller|
+  bbplayer.dunk
+  bbplayer.shoots
+  bbplayer.scores(1)
+  bbplayer.scores(2)
+  bbplayer.scores(3)
+  bbplayer.scores(4)
+end  
+
 
 
 
