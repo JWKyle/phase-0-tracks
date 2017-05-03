@@ -1,3 +1,5 @@
+#GPS 2.2 with Jim Kyle and Steven Aguilar
+
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -43,15 +45,14 @@ def add_item(item, quantity, list)
 end
 
 add_item("peas", 2, grocery_list)
-# p grocery_list
 
 def remove_item(item, list)
   list.delete(item)
 end
 
 remove_item("peas", grocery_list)
-# p grocery_list
-
+# Even though the code for "update_quantity" is the same as "add_item", we decided to keep it for 
+# readability sake
 def update_quantity(item, quantity, list)
   list[item] = quantity
 end
@@ -59,7 +60,6 @@ end
 update_quantity("pizza", 5, grocery_list)
 
 
-# p grocery_list
 
 def print_list(list)
   list.each {|item, quantity| puts "I'm picking up #{quantity} #{item}."}
@@ -68,18 +68,24 @@ end
 print_list(grocery_list)
 
 
-
+## Reflection Section
 
 # What did you learn about pseudocode from working on this challenge?
   # On this challenge, I really wanted to take the time to flesh out what I could with pseudocode.  While I typically
   # do use pseudocode, my previous versions have been more conversational(?) in tone, instead of being 
   # cut and dry.  It really helped me mentally set up how the methods would work, and I feel the extra time
   # made the coding more efficient.
-# What are the tradeoffs of using arrays and hashes for this challenge?
+# What are the trade-offs of using arrays and hashes for this challenge?
   # While using arrays are great for making a list of like things, hashes allowed for more depth, specifically the quantity.
   # I felt like I had more control over the data throughout the exercise.
 # What does a method return?
-  #
+  # A method returns the last line of the method implicitly.  You can use a "return" to create an explicit return.
 # What kind of things can you pass into methods as arguments?
+  #
 # How can you pass information between methods?
 # What concepts were solidified in this challenge, and what concepts are still confusing?
+  # The ability to use data from one method, and have it connect with a second method was something I originally
+  # struggled with, but doing it here has really helped point me in the right direction.  I still find it a little
+  # confusing, but as I continue to drill it and work with it, I think I'll be more comfortable using it. 
+  # Also, for some reason I was getting up with the naming of arguments, but I'm pretty sure I have that knock out.
+
