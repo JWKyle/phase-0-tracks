@@ -70,18 +70,16 @@ print_list(grocery_list)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# What did you learn about pseudocode from working on this challenge?
+  # On this challenge, I really wanted to take the time to flesh out what I could with pseudocode.  While I typically
+  # do use pseudocode, my previous versions have been more conversational(?) in tone, instead of being 
+  # cut and dry.  It really helped me mentally set up how the methods would work, and I feel the extra time
+  # made the coding more efficient.
+# What are the tradeoffs of using arrays and hashes for this challenge?
+  # While using arrays are great for making a list of like things, hashes allowed for more depth, specifically the quantity.
+  # I felt like I had more control over the data throughout the exercise.
+# What does a method return?
+  #
+# What kind of things can you pass into methods as arguments?
+# How can you pass information between methods?
+# What concepts were solidified in this challenge, and what concepts are still confusing?
