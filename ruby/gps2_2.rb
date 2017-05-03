@@ -81,8 +81,10 @@ print_list(grocery_list)
 # What does a method return?
   # A method returns the last line of the method implicitly.  You can use a "return" to create an explicit return.
 # What kind of things can you pass into methods as arguments?
-  #
+  # You can pass intergers, strings, hashes, arrays, and variables. 
 # How can you pass information between methods?
+  # You can pass information between methods by assigning a variable to the return of a method, then calling the variable
+  # in the argument of another method.
 # What concepts were solidified in this challenge, and what concepts are still confusing?
   # The ability to use data from one method, and have it connect with a second method was something I originally
   # struggled with, but doing it here has really helped point me in the right direction.  I still find it a little
