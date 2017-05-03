@@ -54,6 +54,29 @@ end
 removefrom_list("peas", grocery_list)
 p grocery_list
 
+def update_list(item, quantity, grocery_list)
+  grocery_list[item] = quantity
+end
+
+update_list("pizza", 5, grocery_list)
+p grocery_list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
