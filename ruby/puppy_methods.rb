@@ -16,7 +16,7 @@ class Puppy
 
   def dog_years(human_years)
     dog_years = human_years * 7
-    puts "The dog is #{dog_years} in dog years"
+    puts "I am #{dog_years} in dog years"
     dog_years
   end  
 
@@ -28,6 +28,10 @@ class Puppy
     else
       puts "*tilts head in confusion*"
     end  
+  end  
+
+  def initialize
+    puts "Initializing new puppy instance..."
   end    
       
 end
@@ -39,3 +43,6 @@ puppy.dog_years(7)
 puppy.shake("right")
 puppy.shake("left")
 puppy.shake("blah")
+# Initialize runs before the called methods
+
+# When initialize is misspelled, it doesn't run, and I do not get an error.  Moral: check the spelling on initialize!!!
