@@ -31,40 +31,38 @@ string = "carrots apples cereal pizza"
 def groc_list(string)
   grocery_array = string.split
   grocery_list = {}
-  grocery_array.map do |item|
-    grocery_list[item] = 1
-  end  
+  grocery_array.map {|item| grocery_list[item] = 1}
   grocery_list
 end
 
 grocery_list = groc_list(string)
 
 
-def addto_list(item, quantity, grocery_list)
-  grocery_list[item] = quantity
+def add_item(item, quantity, list)
+  list[item] = quantity
 end
 
-addto_list("peas", 2, grocery_list)
+add_item("peas", 2, grocery_list)
 # p grocery_list
 
-def removefrom_list(item, grocery_list)
-  grocery_list.delete(item)
+def remove_item(item, list)
+  list.delete(item)
 end
 
-removefrom_list("peas", grocery_list)
+remove_item("peas", grocery_list)
 # p grocery_list
 
-def update_list(item, quantity, grocery_list)
-  grocery_list[item] = quantity
+def update_quantity(item, quantity, list)
+  list[item] = quantity
 end
 
-update_list("pizza", 5, grocery_list)
+update_quantity("pizza", 5, grocery_list)
 
 
 # p grocery_list
 
-def print_list(grocery_list)
-  grocery_list.each {|item, quantity| puts "I'm picking up #{quantity} #{item}."}
+def print_list(list)
+  list.each {|item, quantity| puts "I'm picking up #{quantity} #{item}."}
 end
 
 print_list(grocery_list)
