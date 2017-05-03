@@ -21,7 +21,29 @@ class Santa
     puts "That was a good #{cookie_type}!"  
   end  
 
+  def celebrate_birthday
+    @age = @age + 1
+  end
+  # 
+  def get_mad_at(bad_deer)
+    @fav_reindeer.each do |bad|
+    if bad == bad_deer
+      bad_reindeer = @fav_reindeer.delete(bad)
+      @fav_reindeer << bad_reindeer
+    end  
+  end
 
+  def gender=(new_gender)
+    @gender = new_gender
+  end  
+
+  def age
+    @age
+  end
+  
+  def ethnicity
+    @ethnicity
+  end      
 end
 
 # santa = Santa.new
