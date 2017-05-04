@@ -10,7 +10,6 @@ class Santa
     @dairy_allergy = allergy
     @hometown = "North Pole"
     @top_sleigh_speed = speed
-
   end  
 
   def speak
@@ -26,10 +25,11 @@ class Santa
   end
   # 
   def get_mad_at(bad_deer)
-    @fav_reindeer.each do |bad|
-    if bad == bad_deer
-      bad_reindeer = @fav_reindeer.delete(bad)
-      @fav_reindeer << bad_reindeer
+    @fav_reindeer.each do |name|
+      if name == bad_deer
+        bad_reindeer = @fav_reindeer.delete(name)
+        @fav_reindeer << bad_reindeer
+      end  
     end  
   end
 
@@ -71,3 +71,14 @@ santas = []
 santas << Santa.new("female", "Ood", "no", 88)
 santas << Santa.new("female", "space-pirate", "yes", "Mach 3")
 p santas
+
+santa = Santa.new("female", "space-pirate", "yes", "Mach 3")
+puts "Santa is a #{santa.age} year-old #{santa.ethnicity} entity."
+p santa
+
+santa.get_mad_at("Vixen")
+p santa
+santa.celebrate_birthday
+p santa
+santa.gender=("Super Space Pirate")
+p santa
