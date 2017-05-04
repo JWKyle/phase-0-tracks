@@ -4,22 +4,28 @@
 # Create a Santacon Class
   # 
 
-
 class Santasim
   attr_accessor :age, :ethnicity, :gender
 
-  def initialize(age, ethnicity, gender)
-    @age = [0..140]
-    @gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-    @ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+  def initialize
+    @age = rand(141)
+    #randomizes the number 0<=x<141
+    @gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"].sample
+    @ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"].sample
+    @santa_data = []
   end
 
-
-
-
-
+  def santageddon(number)
+    number.times.select do |i|
+      @santa_data << Santasim.new(@age, @ethnicities, @gender)
+    end  
+  end
 end      
 
+santasim = Santasim.new
+p santasim.gender
+p santasim.ethnicity
+p santasim.age
 
 
 
