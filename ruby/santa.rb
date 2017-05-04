@@ -1,5 +1,7 @@
 ## Jim Kyle
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
 
   def initialize(gender, ethnicity, allergy, speed)
     puts "Initializing Santa instance ..."
@@ -29,21 +31,10 @@ class Santa
       if name == bad_deer
         bad_reindeer = @fav_reindeer.delete(name)
         @fav_reindeer << bad_reindeer
+        # Could tighten up to '@fav_reindeer << @fav_reindeer.delete(name)', but I find the current method easier to read.
       end  
     end  
   end
-
-  def gender=(new_gender)
-    @gender = new_gender
-  end  
-#Getter Methods
-  def age
-    @age
-  end
-  
-  def ethnicity
-    @ethnicity
-  end      
 end
 
 # santa = Santa.new
