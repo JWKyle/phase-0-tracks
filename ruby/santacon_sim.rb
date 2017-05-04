@@ -7,7 +7,7 @@
 class Santasim
   attr_accessor :age, :ethnicity, :gender
 
-  def initialize
+  def initialize(age, ethnicity, gender)
     @age = rand(141)
     #randomizes the number 0<=x<141
     @gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"].sample
@@ -17,7 +17,7 @@ class Santasim
 
   def santageddon(number)
     number.times.select do |i|
-      @santa_data << Santasim.new(@age, @ethnicities, @gender)
+      @santa_data << Santasim.new(@age, @ethnicity, @gender)
     end  
   end
 end      
@@ -26,6 +26,8 @@ santasim = Santasim.new
 p santasim.gender
 p santasim.ethnicity
 p santasim.age
+
+santasim.santageddon(10)
 
 
 
