@@ -1,5 +1,7 @@
 ## Jim Kyle
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
 
   def initialize(gender, ethnicity, allergy, speed)
     puts "Initializing Santa instance ..."
@@ -19,31 +21,19 @@ class Santa
   def eat_milk_and_cookies(cookie_type)
     puts "That was a good #{cookie_type}!"  
   end  
-
   def celebrate_birthday
-    @age = @age + 1
+    @age += 1
   end
-  # 
+  
   def get_mad_at(bad_deer)
     @fav_reindeer.each do |name|
       if name == bad_deer
         bad_reindeer = @fav_reindeer.delete(name)
         @fav_reindeer << bad_reindeer
+        # Could tighten up to '@fav_reindeer << @fav_reindeer.delete(name)', but I find the current method easier to read.
       end  
     end  
   end
-
-  def gender=(new_gender)
-    @gender = new_gender
-  end  
-
-  def age
-    @age
-  end
-  
-  def ethnicity
-    @ethnicity
-  end      
 end
 
 # santa = Santa.new
