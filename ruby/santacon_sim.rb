@@ -9,16 +9,16 @@ class Santasim
 
   def initialize
     @age = [0..140]
-    #randomizes the number 0<=x<141
-    @gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-    @ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+    #While @age isn't used, this was left for informational purposes
+    @gender = ["agender", "female", "bigender", "male", "gender nonconforming", "gender fluid", "N/A", "pangender", "non-binary", "other"]
+    @ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Polish", "Ood", "Time Lord", "Minotaur", "Ghost", "Space Pirate", "Han Chinese", "Jedi", "Halfling", "Wood Elf", "Polar Elf", "Half-elf", "Ork"]
     @santa_data = []
   end
 
-  def santageddon
-    10.times do |i|
-      santa_stats = [rand(141), @gender.sample, @ethnicity.sample]
-      @santa_data << santa_stats
+  def santageddon(number)
+    number.times do |i|
+      santa_stats = ["Santa number #{i+1}", "Age #{rand(141)}", @gender.sample, @ethnicity.sample]
+      # @santa_data << [rand(141), @gender.sample, @ethnicity.sample]
       p santa_stats
     end  
   end  
@@ -35,8 +35,8 @@ santasim = Santasim.new
 # p santasim.ethnicity
 # p santasim.age
 
-santasim.santageddon
- p @santa_data
+santasim.santageddon(55)
+ 
 
 
 
