@@ -22,5 +22,5 @@ end
 
 santasim = Santasim.new
 
-santasim.santageddon(2000000)
+santasim.santageddon(5000000)
  
