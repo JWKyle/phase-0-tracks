@@ -36,39 +36,32 @@ class Santa
   end
 end
 
-# santa = Santa.new
-# santa.speak
-# santa.eat_milk_and_cookies("Sugar Cookie")
 
-santas = []
-# santas << Santa.new("agender", "black")
-# santas << Santa.new("female", "Latino")
-# santas << Santa.new("bigender", "white")
-# santas << Santa.new("male", "Japanese")
-# santas << Santa.new("female", "prefer not to say")
-# santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-# santas << Santa.new("N/A", "N/A")
+## Jim Kyle's Santacon Simulator for 6.3 R4
 
-# Or
+# Create a SantaCon Simulator that allows for the creation of multiple Santas, all with Random ages (between 0-140) and random ethnicities and genders 
+# Create a Santacon Class
+  #create Age, gender, and ethnicity arrays
+  #create a method to randomly pick an attribute from each array to generate a Santa
 
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
-# p santas
 
-santas << Santa.new("female", "Ood", "no", 88)
-santas << Santa.new("female", "space-pirate", "yes", "Mach 3")
-p santas
+class Santasim
 
-santa = Santa.new("female", "space-pirate", "yes", "Mach 3")
-puts "Santa is a #{santa.age} year-old #{santa.ethnicity} entity."
-p santa
+  def initialize
+    @age = [0..140]
+    #While @age isn't used, this was left for informational purposes
+    @gender = ["agender", "female", "bigender", "male", "gender nonconforming", "gender fluid", "N/A", "pangender", "non-binary", "Two-Spirit"]
+    @ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Polish", "Ood", "Time Lord", "Minotaur", "Ghost", "Space Pirate", "Han Chinese", "Jedi", "Halfling", "Wood Elf", "Polar Elf", "Half-elf", "Ork"]
+  end
 
-santa.get_mad_at("Vixen")
-p santa
-santa.celebrate_birthday
-p santa
-santa.gender=("Super Space Pirate")
-p santa
+  def santageddon(number)
+    number.times do |i|
+      santa_stats = ["Santa number #{i+1}", "Age #{rand(141)}", @gender.sample, @ethnicity.sample]
+      p santa_stats
+    end  
+  end  
+end      
+
+santasim = Santasim.new
+
+santasim.santageddon(500000)
