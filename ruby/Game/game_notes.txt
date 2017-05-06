@@ -1,0 +1,5 @@
+Game Notes and pseudocode 
+
+hangman game
+
+The class will be the game title (sniper)
