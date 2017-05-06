@@ -1,9 +1,9 @@
 ## Jim Kyle
 class Santa
-  attr_reader :age, :ethnicity
-  attr_accessor :gender
+  attr_reader :age, :ethnicity, :allergy
+  attr_accessor :gender, :speed
 
-  def initialize(gender, ethnicity, allergy, speed)
+  def initialize #(gender, ethnicity, allergy, speed)
     puts "Initializing Santa instance ..."
     @gender = gender
     @ethnicity = ethnicity
@@ -63,5 +63,8 @@ class Santasim
 end      
 
 santasim = Santasim.new
+santa = Santa.new
+p santa.get_mad_at("Vixen")
 
-santasim.santageddon(500000)
+
+santasim.santageddon(10)
