@@ -30,4 +30,3 @@ Congrat message if they win.  Taunt if they lose.
  if the letter in array == i, print i in array
  else, print "#"
 
-
