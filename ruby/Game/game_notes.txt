@@ -1,3 +1,4 @@
+Jim Kyle
 Game Notes and pseudocode 
 
 hangman game
