@@ -23,3 +23,7 @@ The guesser receives continual feedback.  So, if guesser guesses correctly, demo
 
 Congrat message if they win.  Taunt if they lose.
 
+HOW DO I SHOW THE ARRAY of what's left?
+ compare the answer array with the guessed array, and if they match, the letter is shown.  use join to make it a work for printing.
+ 
+
