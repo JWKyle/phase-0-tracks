@@ -1,5 +1,5 @@
 ## Jim Kyle
-## 6.7 Game
+## 6.7 Game ##
 class Game
   attr_reader :word
   attr_accessor :guesses

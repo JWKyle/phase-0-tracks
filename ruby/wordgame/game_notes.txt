@@ -1,4 +1,4 @@
-Jim Kyle
+Jim Kyle 6.7 Wordgame
 Game Notes and pseudocode 
 
 hangman game
