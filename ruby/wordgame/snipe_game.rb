@@ -7,17 +7,11 @@ class Game
   def initialize(secret_word)
     @tries = secret_word.length * 2
     @word = secret_word.downcase.chars
-    p @word
     @guessed = []
-    # p @guessed
     @solution = []
-    # p @solution
     @count = 0
-    # p @count
     @remaining_turns = @tries - @count
-    p @remaining_turns
     @working_word = "-" * secret_word.length
-    p @working_word
     @game_over = false
   end
 
@@ -28,12 +22,7 @@ class Game
         @working_word[index] = letter.downcase
       end
     end 
-    p @solution 
-    p @guessed
-    p @working_word
   end
-
-
 end
 
 
@@ -68,15 +57,6 @@ end
 #  for answer.each do i
 #  if the letter in array == i, print i in array
 #  else, print "#"
-
-
-
-
-
-
-
-
-
 
 
 
