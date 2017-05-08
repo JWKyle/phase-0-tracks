@@ -1,7 +1,7 @@
 ## Jim Kyle
 ## 6.7 Game ##
 class Game
-  attr_reader :word, :total_tries, :solution, :guessed
+  attr_reader :word, :total_tries, :solution, :guessed, :working_word, :remaining_turns
   attr_accessor :guesses
   
   def initialize(secret_word)
@@ -38,28 +38,32 @@ class Game
   def finish_game
     @count += 1
     until (@remaining_turns <= 0) || (@working_word == @word)
-      @game_over = true
-    else
-      false
     end
   end
 end
 
-game = Game.new("test")
 
-# puts "Enter Secret Word"
-# secret_word = gets.chomp
+puts "Enter Secret Word"
+secret_word = gets.chomp
+game = Game.new(secret_word)
 
-
- while !game.finish_game
-  puts "Guess a letter"
+  while !game.finish_game
+    puts "Guess a letter"
     letter = gets.chomp
     if game.repeat(letter)
       puts "You've guessed that letter.  Try again!"
     else
     game.guess(letter)
-    # game.finish_game
+    game.finish_game
     end
+  end
+
+  if game.secret_word == game.working_word
+    puts "Congrats!  You guessed my word!"
+    break
+  elsif game.remaining_turns <= 0
+    puts "Too bad!  Better luck next time!"
+  end
 end
     
 
