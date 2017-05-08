@@ -3,7 +3,7 @@
 require_relative 'snipe_game'
 
 describe Game do
-  let(:game) { Game.new }
+  let(:game) { Game.new('test') }
 
   it "doesn't count repeated guesses" do
   end
@@ -13,6 +13,11 @@ describe Game do
 
   it "shows if an answer is correct" do
   end 
+
+  it "shows correct letter in correct spot" do
+    expect().to eq 
+  end
+
 end
 
 # Jim Kyle 6.7 Wordgame
