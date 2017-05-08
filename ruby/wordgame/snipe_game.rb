@@ -31,15 +31,16 @@ class Game
     end
   end
 
-
-
   def count
     @count += 1
   end
 
   def finish_game
-    if (@remaining_turns == 0) || (@working_word == @word)
+    @count += 1
+    until (@remaining_turns <= 0) || (@working_word == @word)
       @game_over = true
+    else
+      false
     end
   end
 end
@@ -50,15 +51,14 @@ game = Game.new("test")
 # secret_word = gets.chomp
 
 
-while !game.finish_game
+ while !game.finish_game
   puts "Guess a letter"
     letter = gets.chomp
     if game.repeat(letter)
       puts "You've guessed that letter.  Try again!"
     else
     game.guess(letter)
-    game.count
-    game.finish_game
+    # game.finish_game
     end
 end
     
