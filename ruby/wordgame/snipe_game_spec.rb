@@ -6,21 +6,19 @@ describe Game do
   let(:game) { Game.new('test') }
 
   it "doesn't count repeated guesses" do
+    expect()
   end
 
-  it "takes a letter, and adds it to a guessed list array" do
-  end
-
-  it "shows if an answer is correct" do
-  end 
 
   it "shows correct letter in correct spot" do
     expect(game.guess('t')).to eq 't--t'
   end
 
-  it "counts the total of guesses"
+  it "counts the total of guesses" do
     expect(game.count).to eq 1
   end
+
+
 
 
 

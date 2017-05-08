@@ -5,6 +5,7 @@ class Game
   attr_accessor :guesses
   
   def initialize(secret_word)
+    @secret_word = secret_word.downcase
     @total_tries = secret_word.length * 2
     @word = secret_word.downcase.chars
     @guessed = []
@@ -24,12 +25,45 @@ class Game
     end 
   end
 
+  def repeat(letter)
+    if @guessed.include?(letter)
+      puts "You've guessed that letter.  Try again!"
+    end
+  end
+
+
+
   def count
     @count += 1
   end
 
-
+  def finish_game
+    if (@remaining_turns == 0) || (@working_word == @word)
+      @game_over = true
+    end
+  end
 end
+
+game = Game.new("test")
+
+# puts "Enter Secret Word"
+# secret_word = gets.chomp
+
+
+while !game.finish_game
+  puts "Guess a letter"
+    letter = gets.chomp
+    if game.repeat(letter)
+      puts "You've guessed that letter.  Try again!"
+    else
+    game.guess(letter)
+    game.count
+    game.finish_game
+    end
+end
+    
+
+
 
 
 # Jim Kyle 6.7 Wordgame
