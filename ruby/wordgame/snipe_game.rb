@@ -30,22 +30,23 @@ class Game
   # puts "You have guessed the following letters: #{@guessed}" 
   # end
 
-  def guess(letter)
-      if @guessed.include?(letter) do
-        puts "You've guessed that letter already.  Please try again."
-        break
-        @guessed << letter
-      end
-     p @guessed 
-    end
 
+  def guess(letter)
+      
+      if @guessed.include?(letter)
+        puts "You've guessed that letter already.  Please try again."
+      else
+        @guessed << letter
+        puts "You guessed #{letter}"
+      end
+    end
     @word.each do |guess|
       if guess == letter
         @solution << letter
       else
         # @solution << letter
       end
-    end  
+    end 
     p @solution 
     p @guessed
   end
