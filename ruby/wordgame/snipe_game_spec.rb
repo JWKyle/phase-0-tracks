@@ -15,8 +15,14 @@ describe Game do
   end 
 
   it "shows correct letter in correct spot" do
-    expect().to eq 
+    expect(game.guess('t')).to eq 't--t'
   end
+
+  it "counts the total of guesses"
+    expect(game.count).to eq 1
+  end
+
+
 
 end
 
