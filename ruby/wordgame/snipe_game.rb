@@ -1,16 +1,16 @@
 ## Jim Kyle
 ## 6.7 Game ##
 class Game
-  attr_reader :word, :tries, :solution, :guessed
+  attr_reader :word, :total_tries, :solution, :guessed
   attr_accessor :guesses
   
   def initialize(secret_word)
-    @tries = secret_word.length * 2
+    @total_tries = secret_word.length * 2
     @word = secret_word.downcase.chars
     @guessed = []
     @solution = []
     @count = 0
-    @remaining_turns = @tries - @count
+    @remaining_turns = @total_tries - @count
     @working_word = "-" * secret_word.length
     @game_over = false
   end
@@ -23,6 +23,12 @@ class Game
       end
     end 
   end
+
+  def count
+    @count += 1
+  end
+
+
 end
 
 
