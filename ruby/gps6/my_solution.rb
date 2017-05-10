@@ -70,4 +70,16 @@ STATE_DATA.each_key do |state|
 end
 #=======================================================================
 # Reflection Section
-Add Comment Collapse
+# On your own, add a commented reflection section to yourmy_solution.rb file. Answer the following questions in your reflection:
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+  # The hash with the state names that are in strings all have unique object ids.  The like-named keys share their object ids.
+# What does require_relative do? How is it different from require?
+  #Require_relative links a page within the same directory as the program.  "Require" activates gems or codes that are within ruby.
+# What are some ways to iterate through a hash?
+  # You can iterate through a hash by using the ".each" methods.  ".each" requires you use both the key and the value.  You may also iterate using the .each_key and the .each_value methods to use only one part of the hash. 
+# When refactoring virus_effects, what stood out to you about the variables, if anything? 
+  #The variables were already being incorporated throughout the methods, but not in the arguments.  Therefore, we could eliminate the arguments in all of the methods (with exception to the initialize method)
+# What concept did you most solidify in this challenge?
+  # Honestly, it was a tie between two for me: (1) Practice working with a more complex data structure and incorporating it into the program was a huge solidifier (not a word, I know) for me.  It gave me a "connecting the dots/aha! moment"
+  # (2) Working on cleaning up the code for readability, Dry, and efficiency was great.  I feel like I miss some ways to make my code cleaner, and there were a few opportunities in this exercise to see new ways to make it better.
