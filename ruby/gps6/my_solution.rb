@@ -1,5 +1,5 @@
 # Virus Predictor
-# I worked on this challenge [by myself 20 min, with Rick 90 min].
+# I worked on this challenge [by myself 20 min, with Ricky Veltri 90 min].
 # We spent [2] hours on this challenge.
 # EXPLANATION OF require_relative
 # require_relative will link files within the same folder
