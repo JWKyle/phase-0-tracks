@@ -25,6 +25,8 @@
     //  second loop statement = do while 1 is greater than or = to 0
     //  third loop statement = count down by 1
 
+    // create the function, create new variable to take reversed word
+
   //// Code ////  
 
 function revstring(string) {
@@ -34,10 +36,18 @@ function revstring(string) {
     for (var i = string.length-1; i >= 0; i--) {
       string_reversed += string[i]; 
     }
-  console.log(string_reversed);
+  // console.log(string_reversed);
+  return string_reversed;
 }
 
-revstring("test")
+// revstring("test")
+// revstring("peanut")
+
+if (1==1) {
+  console.log(revstring("test"));
+}
+
+
 
 
 
