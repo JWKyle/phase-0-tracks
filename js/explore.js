@@ -11,6 +11,21 @@
     // We print the final string with a console.log
       // do we turn this into an array for spacing?  would shift work?
 
+    // 1. Make an array from the string
+    // 2. Divide the letters of the string up individually, so each letter is an item in the array
+    // 3. Use shift to shift out the first letter from the original string, inserting it into the new position, until orig array is empty
+    // 4. make the array into a string
+
+
+    //// 
+
+    var string = "test"
+    for (var i = 0; i < string.length; i++) {
+      console.log(string[i]); 
+    }
+
+
+
 
 
 
