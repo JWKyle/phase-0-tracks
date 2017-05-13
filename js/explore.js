@@ -28,7 +28,7 @@
   //// Code ////  
 
     var string = "test"
-    for (var i = string.length; i >= 0; i--) {
+    for (var i = string.length-1; i >= 0; i--) {
       console.log(string[i]); 
     }
 
