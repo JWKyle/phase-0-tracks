@@ -17,7 +17,13 @@
     // 4. make the array into a string
 
 
-    //// 
+    //// NEW PLAN!! ////
+
+    // using string iteration
+    // create for loop
+    // first loop statement = make i 0 and act as a counter
+    //  second loop statement = the string length minus the i
+    //  third loop statement = count up by 1
 
     var string = "test"
     for (var i = 0; i < string.length; i++) {
