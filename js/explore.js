@@ -27,11 +27,18 @@
 
   //// Code ////  
 
-    var string = "test"
+function revstring(string) {
+
+
+    var string_reversed = "";
     for (var i = string.length-1; i >= 0; i--) {
       console.log(string[i]); 
     }
 
+
+}
+
+revstring("test")
 
 
 
