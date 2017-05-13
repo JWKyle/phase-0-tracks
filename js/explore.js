@@ -21,12 +21,14 @@
 
     // using string iteration
     // create for loop
-    // first loop statement = make i 0 and act as a counter
-    //  second loop statement = the string length minus the i
-    //  third loop statement = count up by 1
+    // first loop statement = make i the string length
+    //  second loop statement = do while 1 is greater than or = to 0
+    //  third loop statement = count down by 1
+
+  //// Code ////  
 
     var string = "test"
-    for (var i = 0; i < string.length; i++) {
+    for (var i = string.length; i >= 0; i--) {
       console.log(string[i]); 
     }
 
