@@ -11,11 +11,13 @@
 
 
 // Function code
-longwords = ["apple", "banana", "pear"]
+var longwords = ["apple", "banana", "pear"];
 
 function longestw() { 
-
-
+  for (var i = 0; i < longwords.length; i++) {
+    console.log(longwords[i]);
+  }
+console.log(longwords[0]);
 }
 
 
@@ -28,5 +30,5 @@ function longestw() {
 
 
 // driver code
- console.log(longestw);
+console.log(longwords[0]);
 
