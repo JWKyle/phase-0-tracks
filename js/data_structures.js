@@ -70,3 +70,17 @@ console.log(newCar);
 newCar.horn();
 newCar.terrain();
 console.log("--------");
+
+// One way to loop the the keys and values in an object would be to use a hasOwnproperty function.  This allows 
+// you to identify the key and variable, then manipulate bot the items individually.  an example would be: 
+    // var band = {"john": "guitar", "paul": "bass", "ringo": "drums"};
+    // for (var key in band) {
+      // if (band.hasOwnproperty(key)) {
+        // console.log(key + "plays the" + band[key]);
+      // }
+    // }
+  // The major gotcha I found is to make sure the O and P are capitalized.  Otherwise, this pulls a function error.
+
+// Advantages of using constructor functions include the fact that you can make copies of an object, and customize them to your liking.
+// Unfortunately, if you need to make a change within the constructor function (like requiring another argument), it could be time
+// consuming editing all the objects made before the change.
