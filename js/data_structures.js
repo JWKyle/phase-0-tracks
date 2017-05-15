@@ -28,34 +28,45 @@ horses[names[i]] = colors[i] };
 
 // R2 - Cars
 
-function Car(model, year, color) {
+function Car(model, year, color, fwdrive) {
   // console.log("This our new car!", this);
 
   this.model = model;
   this.year = year;
   this.color = color;
+  this.fwdrive = fwdrive
 
   this.engine = function() { console.log(":::Revs Engine:::"); };
   this.horn = function () { console.log("HONK!!!");};
+  this.terrain = function(){
+    if (this.fwdrive) {
+      console.log("This car can go off-road!!");
+    } else {
+      console.log("This car should probably stick to the streets...");
+    } 
+  };
 
   // console.log("New Car complete... Beep Bop Boop!");
 }
 
 console.log("--------");
-var newCar = new Car("Audi", 2014, "Purple");
+var newCar = new Car("Audi", 2014, "Purple", true);
 console.log(newCar);
 newCar.engine();
 newCar.horn();
+newCar.terrain();
 console.log("--------");
 
 console.log("--------");
-var newCar = new Car("Ford", 2014, "Red");
+var newCar = new Car("Ford", 2014, "Red", false);
 console.log(newCar);
 newCar.engine();
+newCar.terrain();
 console.log("--------");
 
 console.log("--------");
-var newCar = new Car("Dodge", 2014, "Green");
+var newCar = new Car("Dodge", 2014, "Green", false);
 console.log(newCar);
 newCar.horn();
+newCar.terrain();
 console.log("--------");
