@@ -6,15 +6,21 @@
   // return the word with the most letters
     // use if statement if index[0].length > index[1].length && index[0].length > index[2], return index[0], etc...
     // could use a bubble sort to order the array, then print the index[0], for an array of unknown length?
+// R1
+// Write a function that takes two objects and compares to tell if there are any similarities
+  // need to compare both keys, and both values, ==
+  //two
 
 
+//  ...having a hard time feeding arrays into functions...
 
-
+// R2
+// create a function that takes an interger for the array length
 
 // Function code
 var longwords = ["apple", "banana", "pear"];
 
-function biggest_word() {
+function Biggest_word() {
   var current_length = 0;
   var longest_word;
   
@@ -26,7 +32,35 @@ function biggest_word() {
   }
   console.log(longest_word);
 }
-console.log(biggest_word())
+
+function Compare_names(object1, object2) {
+  this.obj1 = object1;
+  this.obj2 = object2;
+  this.same = false
+    if (obj1.name == obj2.name) {
+      this.same = true;
+    } else {
+      this.same;
+    }
+    if (obj1.age == obj2.age) {
+      this.same = true;
+    } else {
+      this.same;
+    }
+  console.log(this.same);  
+}
+
+function Randomtest
+
+
+// DRIVER CODE
+console.log(Biggest_word());
+console.log(Compare_names({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
+console.log(Compare_names({name: "Steven", age: 52}, {name: "Tamir", age: 54}));
+
+
+
+// Notes, other code
 
 // function longestwordsort() {
 //   var swap;
@@ -59,11 +93,6 @@ console.log(biggest_word())
 //   // }
 
 // // console.log(longwords());
-}
 
 
-
-
-// driver code
-console.log(longestword());
 
