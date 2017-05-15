@@ -54,9 +54,12 @@ function Compare_names(object1, object2) {
 }
 
 function Randomtest (number_of_words) {
-  this.numwords = number_of_words
-  var 
-
+  this.numwords = number_of_words;
+  var wordlength = Math.floor(Math.random() *10);
+  var chars = "abcdefghijklmnopqrstyvwxyz";
+  var result = ""
+  for (var i = length; i > 0; --i) result =+ ;
+// Stuck here
 }
 
 
