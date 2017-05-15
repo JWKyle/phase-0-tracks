@@ -58,10 +58,14 @@ function Randomtest (number_of_words) {
   var wordlength = Math.floor(Math.random() *10);
   var chars = "abcdefghijklmnopqrstyvwxyz";
   var result = ""
-  for (var i = wordlength; i > 0; --i) result =+ chars[i];
+  this.wordlist = []
+  for (var i = wordlength; i > 0; --i) {result =+ chars[i]; // Needs work here
+    }
+    this.wordlist.push(result);
 // Stuck here
 }
 
+// Trying to have the letters be iterated a random number a times and added to the array.
 
 
 // DRIVER CODE
