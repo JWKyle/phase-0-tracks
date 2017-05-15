@@ -14,20 +14,34 @@
 // Function code
 var longwords = ["apple", "banana", "pear"];
 
-function longestwordsort() {
-  var swap;
-  do {
-    swap = false;
-    for (var i=0; i < longwords.length-1; i++) {
-      if (longwords[i] > longwords[i+1]) {
-        var move = longwords[i];
-        longwords[i] = longwords[i+1];
-        longwords[i+1] = move;
-        swap = true;
-      }
+function biggest_word() {
+  var current_length = 0;
+  var longest_word;
+  
+  for(var i = 0; i < longwords.length; i++) {
+    if (longwords[i].length > current_length) {
+      var current_length = longwords[i].length;
+      longest_word = longwords[i];
     }
   }
+  console.log(longest_word);
 }
+console.log(biggest_word())
+
+// function longestwordsort() {
+//   var swap;
+//   do {
+//     swap = false;
+//     for (var i=0; i < longwords.length-1; i++) {
+//       if (longwords[i] > longwords[i+1]) {
+//         var move = longwords[i];
+//         longwords[i] = longwords[i+1];
+//         longwords[i+1] = move;
+//         swap = true;
+//       }
+//     }
+//   }
+// }
 
 // function longestword() { 
 // // works for a defined array
