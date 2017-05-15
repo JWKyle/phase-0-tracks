@@ -25,3 +25,27 @@ for (var i=0; i < colors.length; i++){
 horses[names[i]] = colors[i] };
 
 //console.log(horses);
+
+// R2 - Cars
+
+function Car(model, year, color) {
+  console.log("This our new car!", this);
+
+  this.model = model;
+  this.year = year;
+  this.color = color;
+
+  this.engine = function() { console.log(":::Revs Engine:::"); };
+  this.horn = function () { console.log("HONK!!!");};
+
+  console.log("New Car complete... Beep Bop Boop!");
+}
+
+var newCar = new Car("Audi", 2014, "Purple");
+console.log(newCar);
+newCar.engine();
+newCar.horn();
+console.log("--------");
+
+
+
