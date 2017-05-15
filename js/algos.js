@@ -58,7 +58,7 @@ function Randomtest (number_of_words) {
   var wordlength = Math.floor(Math.random() *10);
   var chars = "abcdefghijklmnopqrstyvwxyz";
   var result = ""
-  for (var i = length; i > 0; --i) result =+ ;
+  for (var i = wordlength; i > 0; --i) result =+ chars[i];
 // Stuck here
 }
 
