@@ -9,13 +9,16 @@
 // R1
 // Write a function that takes two objects and compares to tell if there are any similarities
   // need to compare both keys, and both values, ==
-  //two
+  //two keys need to be used to compare, like name and age
 
 
 //  ...having a hard time feeding arrays into functions...
 
 // R2
 // create a function that takes an interger for the array length
+  // the function pushes each generated name into an array
+  //Math.random() will work for random number generation Math.floor(Math.random()*9 +1)
+  //iterate letters into the word the random number of times
 
 // Function code
 var longwords = ["apple", "banana", "pear"];
@@ -50,7 +53,12 @@ function Compare_names(object1, object2) {
   console.log(this.same);  
 }
 
-function Randomtest
+function Randomtest (number_of_words) {
+  this.numwords = number_of_words
+  var 
+
+}
+
 
 
 // DRIVER CODE
