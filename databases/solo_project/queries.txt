@@ -69,5 +69,40 @@ sqlite>
 --
 R3
 --
+ Variations of joins include "inner", "left", "right", and "full". The full join includes all the data from both tables used.  The left join uses all the data from the first table, plus the data from the right table the met the conditions.  Alternatively, the right join includes all the data from the second index with the data from the first that met the asked for conditions.  Finally, the inner join only includes data from both tables that meet the criteria, much like non specialized "join."
+
+ Note: SQLite only supports the Left Join.
+
+ Deeper, more visual explainations can be found here: 
+ http://www.sql-join.com/sql-join-types/
+ and here:
+ http://www.sql-join.com/sql-join-types/
+--
+sqlite> SELECT comic_books.title, comic_books.pubyear, publishers.name, publishers.foundyear FROM comic_books FULL JOIN publishers ON comic_books.publisher = publishers.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+sqlite> SELECT title FROM comic_books LEFT JOIN publishers ON comic_books.publisher = publishers.id;
+The Amazing Spider-Man
+Action Comics
+Spawn
+Sin City
+Hitman
+X-Statix
+The X-Men
+Astro City
+The Walking Dead
+
+sqlite> SELECT publishers.name, publishers.foundyear FROM comic_books INNER JOIN publishers ON comic_books.publisher = publishers.id;
+Marvel Comics|1939
+DC Comics|1934
+Image Comics|1992
+Dark Horse Comics|1986
+DC Comics|1934
+Marvel Comics|1939
+Marvel Comics|1939
+DC Comics|1934
+Image Comics|1992
+
+
 
 
