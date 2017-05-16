@@ -1,2 +1,73 @@
 Query Log
 
+#Display the information in one table (either table is fine).#
+
+sqlite> SELECT * FROM comic_books;
+1|The Amazing Spider-Man|Stan Lee|Steve Ditko|1|1963|true
+2|Action Comics|Jerry Seigel|Joe Shuster|2|1938|true
+3|Spawn|Todd McFarlane|Todd McFarlane|3|1992|true
+4|Sin City|Frank Miller|Frank Miller|4|1991|false
+5|Harbinger|Jim Shooter|David Lapham|5|1992|false
+6|Hitman|Garth Ennis|John McCrea|2|1996|false
+7|X-Statix|Peter Milligan|Mike Allred|1|2002|false
+8|The X-Men|Stan Lee|Jack Kirby|1|1963|true
+9|Astro City|Kurt Busiek|Brent Anderson|3|1995|true
+10|The Walking Dead|Robert Kirkman|Tony Moore|3|2003|true
+sqlite>
+
+#Update an item that meets some condition (you can choose a condition that makes sense).#
+ 
+sqlite> UPDATE comic_books SET publisher=2 WHERE title="Astro City";
+sqlite>
+
+#Display the information in both tables using one query.#
+
+sqlite> SELECT * FROM comic_books, publishers WHERE comic_books.publisher = publishers.id;
+1|The Amazing Spider-Man|Stan Lee|Steve Ditko|1|1963|true|1|Marvel Comics|1939|New York City|true
+2|Action Comics|Jerry Seigel|Joe Shuster|2|1938|true|2|DC Comics|1934|Burbank, CA|true
+3|Spawn|Todd McFarlane|Todd McFarlane|3|1992|true|3|Image Comics|1992|Portland, OR|true
+4|Sin City|Frank Miller|Frank Miller|4|1991|false|4|Dark Horse Comics|1986|Milwaukie, OR|true
+5|Harbinger|Jim Shooter|David Lapham|5|1992|false|5|Valiant Comics|1989|New York City|false
+6|Hitman|Garth Ennis|John McCrea|2|1996|false|2|DC Comics|1934|Burbank, CA|true
+7|X-Statix|Peter Milligan|Mike Allred|1|2002|false|1|Marvel Comics|1939|New York City|true
+8|The X-Men|Stan Lee|Jack Kirby|1|1963|true|1|Marvel Comics|1939|New York City|true
+9|Astro City|Kurt Busiek|Brent Anderson|2|1995|true|2|DC Comics|1934|Burbank, CA|true
+10|The Walking Dead|Robert Kirkman|Tony Moore|3|2003|true|3|Image Comics|1992|Portland, OR|true
+sqlite>
+
+#Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.#
+
+sqlite> SELECT comic_books.title, comic_books.pubyear, publishers.name, publishers.foundyear FROM comic_books JOIN publishers ON comic_books.publisher = publishers.id;
+The Amazing Spider-Man|1963|Marvel Comics|1939
+Action Comics|1938|DC Comics|1934
+Spawn|1992|Image Comics|1992
+Sin City|1991|Dark Horse Comics|1986
+Harbinger|1992|Valiant Comics|1989
+Hitman|1996|DC Comics|1934
+X-Statix|2002|Marvel Comics|1939
+The X-Men|1963|Marvel Comics|1939
+Astro City|1995|DC Comics|1934
+The Walking Dead|2003|Image Comics|1992
+sqlite>
+
+#Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM comic_books WHERE publisher = 5;
+sqlite>
+sqlite> SELECT * FROM comic_books;
+1|The Amazing Spider-Man|Stan Lee|Steve Ditko|1|1963|true
+2|Action Comics|Jerry Seigel|Joe Shuster|2|1938|true
+3|Spawn|Todd McFarlane|Todd McFarlane|3|1992|true
+4|Sin City|Frank Miller|Frank Miller|4|1991|false
+6|Hitman|Garth Ennis|John McCrea|2|1996|false
+7|X-Statix|Peter Milligan|Mike Allred|1|2002|false
+8|The X-Men|Stan Lee|Jack Kirby|1|1963|true
+9|Astro City|Kurt Busiek|Brent Anderson|2|1995|true
+10|The Walking Dead|Robert Kirkman|Tony Moore|3|2003|true
+sqlite>
+
+--
+R3
+--
+
+
