@@ -1,0 +1,23 @@
+
+RELEASE 3: Join three tables
+sqlite>  select*from reviews JOIN users ON reviews.user_id=users.id JOIN businesses ON reviews.business_id=businesses.id; 
+    1|3|Enjoyable, adequate|1|2|2|Angela|Jolie|1|Amir's Towing
+    2|5|Good mouth feel!|2|1|1|Brad|Pitt|2|Lotus Yoga
+    3|1|Stole my goldfish! I'm sad.|2|1|1|Brad|Pitt|2|Lotus Yoga
+    4|4|I'm ok with the service, I'd come back|3|3|3|Holly|Berry|3|Sushi World
+sqlite> select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users ON reviews.user_id=users.id JOIN businesses ON reviews.business_id=businesses.id;
+    Angela|Jolie|Amir's Towing|3|Enjoyable, adequate
+    Brad|Pitt|Lotus Yoga|5|Good mouth feel!
+    Brad|Pitt|Lotus Yoga|1|Stole my goldfish! I'm sad.
+    Holly|Berry|Sushi World|4|I'm ok with the service, I'd come back
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users, businesses, reviews WHERE reviews.user_id=users.id AND reviews.business_id=businesses.id;
+    Angela|Jolie|Amir's Towing|3|Enjoyable, adequate
+    Brad|Pitt|Lotus Yoga|5|Good mouth feel!
+    Brad|Pitt|Lotus Yoga|1|Stole my goldfish! I'm sad.
+    Holly|Berry|Sushi World|4|I'm ok with the service, I'd come back
+SELECT*FROM businesses, users, reviews WHERE reviews.user_id=users.id AND reviews.business_id=businesses.id AND businesses.id=2;
+    2|Lotus Yoga|1|Brad|Pitt|2|5|Good mouth feel!|2|1
+    2|Lotus Yoga|1|Brad|Pitt|3|1|Stole my goldfish! I'm sad.|2|1
+SELECT businesses.name, users.first_name, users.last_name, reviews.stars, reviews.comment FROM businesses, users, reviews WHERE reviews.user_id=users.id AND reviews.business_id=businesses.id AND businesses.id=2;
+    Lotus Yoga|Brad|Pitt|5|Good mouth feel!
+    Lotus Yoga|Brad|Pitt|1|Stole my goldfish! I'm sad.  
