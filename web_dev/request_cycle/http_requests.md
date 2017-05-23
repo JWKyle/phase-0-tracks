@@ -16,5 +16,8 @@ Common HTTP codes are:
 501- Server did not recognize the asked for method
 
 #What is the difference between a GET request and a POST request? When might each be used?#
+Get- all the relevant information is supplied by the URL.  This information can be bookmarked.
+Post- Client provides data via message box or other means outside URL, like form data.  This information can not be bookmarked, and will alert the user when they try to re-fresh or re-submit a page that they will need to re-submit the post data.
 
 #Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?#
+Cookies store data on a users computer/browser for websites to allow websites to load static information faster.  It also tracks viewing and shopping habits to allow advertisers to market more directly, and can also hold certain login information so users do not need to re-login or lose their chopping cart during a session.
