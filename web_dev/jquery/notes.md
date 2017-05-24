@@ -7,4 +7,17 @@ Time Management: Create 4 x 20-25min study blocks, including testing and buildin
 
 Build project.
 
+############# Study Methods Used #############
+
+Read introduction to jQuery in John Duckett's book "Javascript & jQuery"
+
+Looked at jquery.org
+
+Found cheat sheet at https://makeawebsitehub.com/jquery-mega-cheat-sheet/
+
+Experimented with code at https://www.w3schools.com/jquery/jquery_selectors.asp
+
+
+
+
 
