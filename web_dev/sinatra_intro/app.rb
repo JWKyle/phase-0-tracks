@@ -49,3 +49,15 @@ end
 get '/contact' do
   "123 Main St.<br> Peanut, GA. <br> 90212"
 end
+
+# Get a route the says good job to a name param, and if no name provided, just "Good Job!"
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
