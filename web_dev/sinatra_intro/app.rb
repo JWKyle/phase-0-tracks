@@ -65,3 +65,7 @@ get '/:fnum/:snum' do
   total = params[:fnum].to_f + params[:snum].to_f
   total.to_s
 end
+get '/name_search/:name' do
+  student = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])
+  student.to_s
+end
