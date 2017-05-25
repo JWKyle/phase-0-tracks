@@ -15,7 +15,11 @@ Looked at jquery.org
 
 Found cheat sheet at https://makeawebsitehub.com/jquery-mega-cheat-sheet/
 
+Explored jquery.com and .org
+
 Experimented with code at https://www.w3schools.com/jquery/jquery_selectors.asp
+
+I felt the introduction to jQuery and from w3schools got me off on the right foot.  Using the jquery sites were a little dry and rough, but once I got my footing, were useful.  I then used the w3schools populated code try out some of the elements and methods.  I used the Duckett book as my cheat sheet, primarily, since it gave a clearer "why" to my questions.
 
 
 
