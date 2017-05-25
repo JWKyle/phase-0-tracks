@@ -44,3 +44,28 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# Route that displays address
+get '/contact' do
+  "123 Main St.<br> Peanut, GA. <br> 90212"
+end
+
+# Get a route the says good job to a name param, and if no name provided, just "Good Job!"
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+get '/:fnum/:snum' do
+  total = params[:fnum].to_f + params[:snum].to_f
+  total.to_s
+end
+get '/campus_list/:campus' do
+  location = db.execute("SELECT  FROM students WHERE campus=?", params[:campus])[0]
+  location.to_s
+end
