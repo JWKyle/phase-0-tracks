@@ -45,13 +45,42 @@
       <input type="email" name="email">
     </div>
   <p>My clicking the submit button, you are saying it's ok for me to add you to my e-mail list, and are human age 13 or older.</p>
-  <button type="submit" value="submit">Submit</button>
+  <!-- <button type="submit" value="submit">Submit</button> -->
   </fieldset>
   </form>
 <h2>Thank you!</h2>
 <p>Thank you for reading my little page.  I had a lot of fun making it, and look forward to growing it in the future!</p>
 <p>Also, if you'd like to see the submission thank you page without submitting information, <a href="thankyou.html">Click Here!</a></p>
 <p>- Gill</p>
+<button>Do Stuff!</button>
+<button>#2</button>
+<button>#3</button>
+<button>Show</button>
 <footer class="purp">Website created by Luke the Dog, Copyright 2017.</footer>
+<script src="jstest.js"></script>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button:first").click(function(){
+        $("p").hide();
+    });
+});
+$(document).ready(function(){
+    $("button:eq(2)").click(function(){
+        $("h2").hide();
+    });
+});
+$(document).ready(function(){
+    $("button:eq(1)").click(function(){
+        $("h2").css('color', "red");
+    });
+});
+$(document).ready(function(){
+    $("button:last").click(function(){
+        $("*").show();
+        $("script").hide();
+    });
+});
+</script>
 </body>
 </html>
