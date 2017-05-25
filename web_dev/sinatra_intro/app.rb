@@ -61,3 +61,7 @@ get '/great_job' do
   end
 end
 
+get '/:fnum/:snum' do
+  total = params[:fnum].to_f + params[:snum].to_f
+  total.to_s
+end
